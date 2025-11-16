@@ -2,161 +2,567 @@
 <html lang="tr">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Gizlilik Politikası - Ben Neyim?</title>
         <style>
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #f9f9f9;
-                color: #333;
+            * {
+                box-sizing: border-box;
                 margin: 0;
                 padding: 0;
-                line-height: 1.6;
             }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+                    'Droid Sans', 'Helvetica Neue', sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background-attachment: fixed;
+                color: #2d3748;
+                line-height: 1.7;
+                padding: 20px;
+                min-height: 100vh;
+            }
+
             .container {
-                max-width: 900px;
-                margin: 40px auto;
-                background: white;
-                padding: 40px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
+                max-width: 920px;
+                margin: 0 auto;
+                background: #ffffff;
+                padding: 50px;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                animation: fadeIn 0.6s ease-in;
             }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
             h1 {
                 text-align: center;
-                color: #2c3e50;
+                font-size: 2.5em;
+                font-weight: 700;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 40px;
+                letter-spacing: -0.5px;
             }
+
             h2 {
-                color: #34495e;
-                border-bottom: 2px solid #ecf0f1;
-                padding-bottom: 5px;
-                margin-top: 40px;
+                color: #1a202c;
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+                border-bottom: 3px solid transparent;
+                border-image: linear-gradient(90deg, #667eea, #764ba2);
+                border-image-slice: 1;
+                position: relative;
             }
+
+            h2::before {
+                content: '●';
+                color: #667eea;
+                margin-right: 10px;
+                font-size: 0.8em;
+            }
+
             h3 {
-                color: #555;
-                margin-top: 25px;
+                color: #2d3748;
+                font-size: 1.3em;
+                font-weight: 600;
+                margin-top: 30px;
+                margin-bottom: 15px;
             }
+
             ul {
-                padding-left: 20px;
+                padding-left: 30px;
+                margin-top: 15px;
             }
+
             ul li {
-                margin-bottom: 8px;
+                margin-bottom: 12px;
+                line-height: 1.8;
+                position: relative;
             }
+
+            ul li::marker {
+                color: #667eea;
+                font-weight: bold;
+            }
+
             a {
-                color: #3498db;
+                color: #667eea;
+                text-decoration: none;
+                font-weight: 500;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: #764ba2;
                 text-decoration: none;
             }
-            a:hover {
-                text-decoration: underline;
+
+            a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background: linear-gradient(90deg, #667eea, #764ba2);
+                transition: width 0.3s ease;
             }
+
+            a:hover::after {
+                width: 100%;
+            }
+
             p {
-                margin-top: 10px;
+                margin-top: 12px;
+                margin-bottom: 18px;
+                line-height: 1.8;
+                color: #4a5568;
+            }
+
+            strong {
+                color: #2d3748;
+                font-weight: 600;
+            }
+
+            .app-info {
+                background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+                padding: 30px;
+                border-radius: 16px;
+                margin-bottom: 40px;
+                box-shadow: 0 10px 30px rgba(253, 203, 110, 0.3);
+                border: none;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .app-info::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(
+                    circle,
+                    rgba(255, 255, 255, 0.3) 0%,
+                    transparent 70%
+                );
+                animation: shimmer 3s infinite;
+            }
+
+            @keyframes shimmer {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+                50% {
+                    transform: translate(10px, 10px);
+                }
+            }
+
+            .app-info p {
+                color: #2d3748;
+                margin: 8px 0;
+                position: relative;
+                z-index: 1;
+            }
+
+            .app-info ul {
+                position: relative;
+                z-index: 1;
+            }
+
+            .highlight {
+                background: linear-gradient(135deg, #a8e6ff 0%, #74b9ff 100%);
+                padding: 25px;
+                border-radius: 16px;
+                margin: 25px 0;
+                box-shadow: 0 8px 25px rgba(116, 185, 255, 0.3);
+                border: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .highlight:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(116, 185, 255, 0.4);
+            }
+
+            .highlight p {
+                color: #1a202c;
+            }
+
+            .warning {
+                background: linear-gradient(135deg, #fff8dc 0%, #ffe4a0 100%);
+                padding: 25px;
+                border-radius: 16px;
+                margin: 25px 0;
+                box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+                border: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .warning:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(255, 193, 7, 0.4);
+            }
+
+            .warning p {
+                color: #1a202c;
+            }
+
+            .success {
+                background: linear-gradient(135deg, #b8f5cd 0%, #55efc4 100%);
+                padding: 25px;
+                border-radius: 16px;
+                margin: 25px 0;
+                box-shadow: 0 8px 25px rgba(85, 239, 196, 0.3);
+                border: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .success:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(85, 239, 196, 0.4);
+            }
+
+            .success p {
+                color: #1a202c;
+            }
+
+            .success h3 {
+                color: #00b894;
+                margin-top: 0;
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+
+                .container {
+                    padding: 30px 20px;
+                    border-radius: 15px;
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+
+                h2 {
+                    font-size: 1.4em;
+                }
+
+                h3 {
+                    font-size: 1.15em;
+                }
+            }
+
+            /* Scroll animasyonu için */
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Liste öğeleri için hover efekti */
+            ul li {
+                transition: transform 0.2s ease;
+            }
+
+            ul li:hover {
+                transform: translateX(5px);
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>Gizlilik Politikası</h1>
-            <p><strong>Son Güncelleme:</strong> 21.07.2025</p>
-            <p><strong>Yayıncı:</strong> Developer Hope</p>
-            <p><strong>Uygulama Adı:</strong> Ben Neyim?</p>
-            <p>
-                <strong>İletişim:</strong>
-                <a href="mailto:developerhope4@gmail.com"
-                    >developerhope4@gmail.com</a
-                >
-            </p>
+
+            <div class="app-info">
+                <p><strong>Son Güncelleme:</strong> 16.11.2025</p>
+                <p><strong>Yayıncı:</strong> Developer Hope</p>
+                <p><strong>Uygulama Adı:</strong> Ben Neyim?</p>
+                <p>
+                    <strong>İletişim:</strong>
+                    <a href="mailto:developerhope4@gmail.com"
+                        >developerhope4@gmail.com</a
+                    >
+                </p>
+            </div>
 
             <h2>1. Giriş</h2>
             <p>
-                Ben Neyim? mobil uygulaması, kullanıcıların kişisel verilerini
-                korumayı ciddiyetle önemsemektedir. Bu Gizlilik Politikası,
-                uygulamayı kullandığınızda topladığımız ve işlediğimiz kişisel
-                verilerinizin nasıl korunduğunu, kullanıldığını, saklandığını ve
-                paylaşıldığını açıklar. Uygulamayı kullanarak bu politikayı
-                kabul etmiş sayılırsınız.
+                Ben Neyim? uygulaması, kullanıcı gizliliğini ve veri güvenliğini
+                ciddiye almaktadır. Bu Gizlilik Politikası, uygulamanın hangi
+                verileri topladığını, nasıl kullandığını ve koruduğunu açıklar.
+                Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.
             </p>
 
-            <h2>2. Hangi Verileri Topluyoruz?</h2>
-            <h3>A. Kişisel Veriler:</h3>
+            <div class="highlight">
+                <p>
+                    <strong>Önemli:</strong> Ben Neyim? uygulamasında kullanıcı
+                    hesabı oluşturma, giriş yapma veya kayıt olma özelliği
+                    bulunmamaktadır. Uygulama, isim, e-posta, telefon numarası,
+                    adres, konum veya ödeme bilgisi gibi doğrudan kişisel
+                    veriler toplamamaktadır.
+                </p>
+            </div>
+
+            <h2>2. Toplanan Veriler</h2>
+            <p>
+                Uygulama, sadece işlevsellik, analiz ve reklam gösterimi için
+                gerekli olan sınırlı teknik verileri toplar:
+            </p>
+
+            <h3>A. Cihaz veya Diğer Kimlikler</h3>
+            <ul>
+                <li>Reklam Kimliği (Advertising ID)</li>
+                <li>Firebase Instance ID</li>
+                <li>Firebase Cloud Messaging (FCM) Token</li>
+                <li>Uygulama Instance ID</li>
+            </ul>
+
+            <h3>B. Uygulama Etkinliği</h3>
+            <ul>
+                <li>Uygulama içi etkileşimler ve kullanım verileri</li>
+                <li>Sayfa görüntülemeleri ve tıklama eylemleri</li>
+                <li>Oturum süreleri</li>
+            </ul>
+
+            <h3>C. Teşhis ve Kilitlenme Verileri</h3>
+            <ul>
+                <li>Kilitlenme günlükleri (crash logs)</li>
+                <li>Hata raporları ve teşhis bilgileri</li>
+                <li>Cihaz modeli ve üretici bilgisi</li>
+                <li>İşletim sistemi sürümü</li>
+                <li>Uygulama sürümü</li>
+            </ul>
+
+            <h2>3. Verilerin Kullanım Amacı</h2>
+            <p>Toplanan veriler yalnızca aşağıdaki amaçlarla kullanılır:</p>
             <ul>
                 <li>
-                    Kimlik Bilgileri: İsim, e-posta adresi, telefon numarası.
+                    <strong>Uygulama İşlevselliği:</strong> Temel özelliklerin
+                    sağlanması ve push bildirimlerin gönderilmesi
                 </li>
                 <li>
-                    Cihaz Bilgileri: IP adresi, cihaz kimliği, işletim sistemi,
-                    tarayıcı türü.
+                    <strong>Analiz:</strong> Uygulama performansının izlenmesi
+                    ve iyileştirilmesi
                 </li>
                 <li>
-                    Konum Bilgileri: Yaklaşık ya da kesin konum (kullanıcı
-                    izniyle).
+                    <strong>Reklam ve Pazarlama:</strong> Kişiselleştirilmiş
+                    reklamların gösterilmesi
                 </li>
                 <li>
-                    Kullanıcı Etkileşim Verileri: Kullanım ve tıklama verileri.
+                    <strong>Güvenlik ve Uyumluluk:</strong> Sahtekarlığın
+                    önlenmesi ve yasal gerekliliklerin karşılanması
                 </li>
             </ul>
-            <h3>B. Üçüncü Taraflarla Paylaşılan Veriler:</h3>
+
+            <h2>4. Üçüncü Taraf Hizmet Sağlayıcılar</h2>
+            <p>
+                Uygulama, aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır. Bu
+                hizmetler, yukarıda belirtilen verileri kendi gizlilik
+                politikaları doğrultusunda işleyebilir:
+            </p>
             <ul>
-                <li>Ödeme işlemleri için gerekli bilgiler.</li>
-                <li>Analitik ve performans izleme verileri.</li>
+                <li>
+                    <strong>Google AdMob:</strong> Reklam gösterimi ve gelir
+                    sağlama
+                    <br />
+                    <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank"
+                        >AdMob Gizlilik Politikası</a
+                    >
+                </li>
+                <li>
+                    <strong>Firebase Analytics:</strong> Kullanım analizi ve
+                    uygulama performansı izleme
+                    <br />
+                    <a
+                        href="https://firebase.google.com/support/privacy"
+                        target="_blank"
+                        >Firebase Gizlilik Politikası</a
+                    >
+                </li>
+                <li>
+                    <strong>Firebase Crashlytics:</strong> Kilitlenme raporları
+                    ve hata takibi
+                    <br />
+                    <a
+                        href="https://firebase.google.com/support/privacy"
+                        target="_blank"
+                        >Crashlytics Gizlilik Politikası</a
+                    >
+                </li>
+                <li>
+                    <strong>Firebase Cloud Messaging (FCM):</strong> Push
+                    bildirimleri
+                    <br />
+                    <a
+                        href="https://firebase.google.com/support/privacy"
+                        target="_blank"
+                        >FCM Gizlilik Politikası</a
+                    >
+                </li>
             </ul>
 
-            <h2>3. Kişisel Verilerin Kullanım Amacı</h2>
+            <div class="highlight">
+                <p>
+                    <strong>Kişiselleştirilmiş Reklamlar:</strong> Google AdMob,
+                    size ilgili reklamlar göstermek için cihaz kimliği ve
+                    uygulama kullanım verilerini kullanır. Cihaz ayarlarınızdan
+                    reklam tercihlerinizi yönetebilirsiniz.
+                </p>
+            </div>
+
+            <h2>5. Veri Güvenliği</h2>
+            <p>
+                Toplanan tüm veriler, endüstri standardı güvenlik önlemleriyle
+                korunmaktadır:
+            </p>
             <ul>
-                <li>Temel uygulama işlevlerinin sağlanması</li>
-                <li>Kişiselleştirilmiş içerik sunulması</li>
-                <li>Analitik verilerle uygulamanın geliştirilmesi</li>
-                <li>Güvenlik ve dolandırıcılığın önlenmesi</li>
-                <li>Kullanıcı desteği ve bildirimlerin sağlanması</li>
+                <li>Veriler HTTPS protokolü ile şifreli olarak iletilir</li>
+                <li>
+                    Firebase güvenlik kuralları ile erişim kontrolü sağlanır
+                </li>
+                <li>Veriler yalnızca gerekli süre boyunca saklanır</li>
             </ul>
 
-            <h2>4. Verilerin Güvenliği</h2>
+            <h2>6. Veri Paylaşımı</h2>
+            <p>
+                Toplanan veriler, yalnızca yukarıda belirtilen üçüncü taraf
+                hizmet sağlayıcılarla (Google AdMob, Firebase) ve aşağıdaki
+                durumlarda paylaşılabilir:
+            </p>
             <ul>
-                <li>SSL şifreleme ile veri güvenliği sağlanır.</li>
-                <li>Veriler sadece yasal süre kadar saklanır.</li>
+                <li>Yasal zorunluluk ve yetkili mercilerin talebi durumunda</li>
+                <li>Güvenlik tehditlerine karşı koruma amacıyla</li>
+                <li>
+                    Hizmet sağlayıcıların teknik destek ve analiz hizmetleri
+                    için
+                </li>
             </ul>
 
-            <h2>5. Üçüncü Taraflarla Paylaşım</h2>
-            <ul>
-                <li>Ödeme ve analitik gibi hizmet sağlayıcılar.</li>
-                <li>Yasal gereklilik durumlarında yetkili merciler.</li>
-            </ul>
-
-            <h2>6. Verilerin Silinmesi ve Hesap Silme</h2>
+            <h2>7. Veri Saklama Süresi</h2>
             <p>
-                Kullanıcılar uygulama içinden hesap silme talebi oluşturabilir.
-                Hesap silindiğinde tüm veriler de silinir.
+                Toplanan veriler, uygulamanın işlevselliğini sağlamak için
+                gerekli olduğu sürece veya yasal yükümlülükler gereği
+                saklanmaktadır. Firebase Analytics ve Crashlytics verileri
+                varsayılan olarak 60 gün saklanır.
             </p>
 
-            <h2>7. Çocukların Gizliliği</h2>
-            <p>
-                Uygulama, 13 yaş altı çocuklara yönelik değildir. Bu yaş
-                grubundan veri toplanırsa silinir.
-            </p>
+            <h2>8. Çocukların Gizliliği</h2>
+            <div class="warning">
+                <p>
+                    <strong>13 Yaş ve Üzeri:</strong> Ben Neyim? uygulaması, 13
+                    yaş altı çocuklardan bilerek veri toplamamaktadır. Eğer 13
+                    yaş altı bir çocuğa ait veri toplandığını fark edersek, bu
+                    verileri derhal sileriz.
+                </p>
+                <p>
+                    <strong>Ebeveynler:</strong> Eğer çocuğunuzun uygulamayı
+                    kullandığını ve veri sağladığını düşünüyorsanız, lütfen
+                    <a href="mailto:developerhope4@gmail.com"
+                        >developerhope4@gmail.com</a
+                    >
+                    adresinden bizimle iletişime geçin.
+                </p>
+            </div>
 
-            <h2>8. Kullanıcı İzinleri ve Onayı</h2>
+            <h2>9. Kullanıcı Hakları ve Veri Silme Talepleri</h2>
             <p>
-                Kişisel veriler açık rıza ile toplanır ve kullanıcı istediği
-                zaman iznini geri çekebilir.
+                <strong>Hesap Silme:</strong> Ben Neyim? uygulamasında kullanıcı
+                hesabı bulunmadığından, uygulama içinden hesap silme özelliği de
+                bulunmamaktadır.
             </p>
-
-            <h2>9. Değişiklikler</h2>
             <p>
-                Gizlilik politikası değişirse, kullanıcılar uygulama içinden
-                bilgilendirilir.
+                <strong>Veri Silme Talebi:</strong> Uygulamanın topladığı
+                verilerle (cihaz kimlikleri, analitik veriler, kilitlenme
+                raporları) ilgili soru veya talepte bulunmak için aşağıdaki
+                e-posta adresinden bizimle iletişime geçebilirsiniz:
             </p>
-
-            <h2>10. İletişim</h2>
             <p>
-                Her türlü soru için bize
                 <a href="mailto:developerhope4@gmail.com"
                     >developerhope4@gmail.com</a
                 >
-                adresinden ulaşabilirsiniz.
             </p>
 
-            <h2>11. Uygulama Verilerini Silme ve Hesap Silme Talebi</h2>
+            <div class="highlight">
+                <p>
+                    <strong>Reklam Tercihlerinizi Yönetin:</strong> Cihazınızın
+                    ayarlarından reklam kimliğinizi (Advertising ID)
+                    sıfırlayabilir veya kişiselleştirilmiş reklamları devre dışı
+                    bırakabilirsiniz.
+                </p>
+            </div>
+
+            <h2>10. Gizlilik Politikası Değişiklikleri</h2>
             <p>
-                Uygulama içindeki hesap silme seçeneğini kullanarak veri silme
-                talebinde bulunabilirsiniz.
+                Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli
+                değişiklikler olması durumunda, kullanıcılar uygulama içinde
+                veya bu sayfada bilgilendirilecektir. Politikaya düzenli olarak
+                göz atmanızı öneririz.
+            </p>
+
+            <h2>11. İletişim</h2>
+            <div class="app-info">
+                <p>
+                    Bu Gizlilik Politikası ile ilgili sorularınız, önerileriniz
+                    veya talepleriniz için bizimle iletişime geçebilirsiniz:
+                </p>
+                <ul>
+                    <li>
+                        <strong>E-posta:</strong>
+                        <a href="mailto:developerhope4@gmail.com"
+                            >developerhope4@gmail.com</a
+                        >
+                    </li>
+                    <li><strong>Yayıncı:</strong> Developer Hope</li>
+                    <li><strong>Yanıt Süresi:</strong> 7 iş günü içinde</li>
+                </ul>
+            </div>
+
+            <div class="success">
+                <h3>Gizlilik Taahhüdümüz</h3>
+                <p>
+                    <strong>Ben Neyim?</strong> olarak, gizliliğinizi korumayı
+                    ve sadece gerekli verileri toplamayı taahhüt ediyoruz.
+                    Uygulamayı kullanırken güvende olduğunuzu bilmenizi
+                    istiyoruz.
+                </p>
+                <p>🎯 <strong>İyi eğlenceler!</strong></p>
+            </div>
+
+            <p
+                style="
+                    text-align: center;
+                    margin-top: 50px;
+                    color: #666;
+                    border-top: 2px solid #ecf0f1;
+                    padding-top: 20px;
+                "
+            >
+                <small>
+                    Bu doküman Ben Neyim? uygulaması için hazırlanmıştır.<br />
+                    Son Güncelleme: 16.11.2025<br />
+                    © 2025 Developer Hope. Tüm hakları saklıdır.
+                </small>
             </p>
         </div>
     </body>
