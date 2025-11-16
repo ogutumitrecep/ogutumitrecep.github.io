@@ -1,339 +1,572 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gizlilik Politikası - Color Gate</title>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-      }
-      .container {
-        max-width: 900px;
-        margin: 40px auto;
-        background: white;
-        padding: 40px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-      h1 {
-        text-align: center;
-        color: #2c3e50;
-        margin-bottom: 30px;
-      }
-      h2 {
-        color: #34495e;
-        border-bottom: 2px solid #ecf0f1;
-        padding-bottom: 5px;
-        margin-top: 40px;
-      }
-      h3 {
-        color: #555;
-        margin-top: 25px;
-      }
-      ul {
-        padding-left: 20px;
-      }
-      ul li {
-        margin-bottom: 8px;
-      }
-      a {
-        color: #3498db;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      p {
-        margin-top: 10px;
-        margin-bottom: 15px;
-      }
-      .app-info {
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 6px;
-        margin-bottom: 30px;
-      }
-      .highlight {
-        background-color: #e8f4f8;
-        padding: 15px;
-        border-left: 4px solid #3498db;
-        margin: 20px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Gizlilik Politikası</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gizlilik Politikası - Renk Kapısı: Sonsuz Labirent</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-      <div class="app-info">
-        <p><strong>Son Güncelleme:</strong> 01 Eylül 2025</p>
-        <p><strong>Yayıncı:</strong> Developer Hope</p>
-        <p><strong>Uygulama Adı:</strong> Color Gate</p>
-        <p><strong>Uygulama Türü:</strong> Renk Eşleştirme Arcade Oyunu</p>
-        <p>
-          <strong>İletişim:</strong>
-          <a href="mailto:developerhope4@gmail.com">developerhope4@gmail.com</a>
-        </p>
-      </div>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+                    'Droid Sans', 'Helvetica Neue', sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background-attachment: fixed;
+                color: #2d3748;
+                line-height: 1.7;
+                padding: 20px;
+                min-height: 100vh;
+            }
 
-      <h2>1. Giriş</h2>
-      <p>
-        Color Gate mobil ve masaüstü oyunu ("Uygulama"), kullanıcıların kişisel
-        verilerini korumayı önemsemektedir. Bu Gizlilik Politikası, oyunumuzu
-        kullandığınızda topladığımız verileri, bunların nasıl kullanıldığını ve
-        korunduğunu açıklamaktadır. Uygulamayı kullanarak bu politikayı kabul
-        etmiş sayılırsınız.
-      </p>
+            .container {
+                max-width: 920px;
+                margin: 0 auto;
+                background: #ffffff;
+                padding: 50px;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                animation: fadeIn 0.6s ease-in;
+            }
 
-      <div class="highlight">
-        <strong>Önemli:</strong> Color Gate temel olarak çevrimdışı çalışan bir
-        oyundur ancak gelişmiş özellikler için internet bağlantısı kullanabilir.
-      </div>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
 
-      <h2>2. Topladığımız Veriler</h2>
+            h1 {
+                text-align: center;
+                font-size: 2.5em;
+                font-weight: 700;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 40px;
+                letter-spacing: -0.5px;
+            }
 
-      <h3>A. Oyun Verileri (Yerel Depolama):</h3>
-      <ul>
-        <li>
-          <strong>Oyun Skorları:</strong> En yüksek skorunuz ve oyun geçmişiniz
-        </li>
-        <li>
-          <strong>Oyun Tercihleri:</strong> Zorluk seviyesi, kapı sayısı
-          seçimleri
-        </li>
-        <li>
-          <strong>Oyun İstatistikleri:</strong> Oynanan oyun sayısı, tarih
-          bilgileri
-        </li>
-        <li>
-          <strong>Uygulama Ayarları:</strong> Oyun modları ve özelleştirmeler
-        </li>
-      </ul>
+            h2 {
+                color: #1a202c;
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+                border-bottom: 3px solid transparent;
+                border-image: linear-gradient(90deg, #667eea, #764ba2);
+                border-image-slice: 1;
+                position: relative;
+            }
 
-      <p>
-        <strong>Oyun verileri öncelikli olarak cihazınızda saklanır.</strong>
-      </p>
+            h2::before {
+                content: '●';
+                color: #667eea;
+                margin-right: 10px;
+                font-size: 0.8em;
+            }
 
-      <h3>B. Cihaz Bilgileri (Otomatik Toplanan):</h3>
-      <ul>
-        <li>İşletim sistemi versiyonu (performans optimizasyonu için)</li>
-        <li>Ekran çözünürlüğü (oyun deneyimi iyileştirmesi için)</li>
-        <li>Uygulama çökme raporları (hata ayıklama için)</li>
-        <li>Reklam kimliği (kişiselleştirilmiş reklam gösterimi için)</li>
-        <li>Kullanım istatistikleri (uygulama iyileştirmesi için)</li>
-      </ul>
+            h3 {
+                color: #2d3748;
+                font-size: 1.3em;
+                font-weight: 600;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
 
-      <h3>C. Reklam ve Analitik Verileri:</h3>
-      <ul>
-        <li>Reklam etkileşim verileri (tıklama, görüntüleme)</li>
-        <li>Demografik bilgiler (yaş grubu, ilgi alanları - anonim)</li>
-        <li>Uygulama kullanım süresi ve sıklığı</li>
-        <li>Oyun içi etkinlik verileri (analitik amaçlı)</li>
-      </ul>
+            ul {
+                padding-left: 30px;
+                margin-top: 15px;
+            }
 
-      <h3>D. Genel Olarak Toplamadığımız Veriler:</h3>
-      <ul>
-        <li>Ad, soyad, doğrudan kimlik bilgileri</li>
-        <li>Telefon numarası</li>
-        <li>Hassas kişisel bilgiler</li>
-        <li>Finansal bilgiler</li>
-      </ul>
+            ul li {
+                margin-bottom: 12px;
+                line-height: 1.8;
+                position: relative;
+            }
 
-      <h2>3. Verilerin Kullanım Amacı</h2>
-      <p>Topladığımız sınırlı veriler yalnızca şu amaçlarla kullanılır:</p>
-      <ul>
-        <li>
-          <strong>Oyun Deneyimi:</strong> Skorlarınızı kaydetmek ve oyun
-          ilerlemesini takip etmek
-        </li>
-        <li>
-          <strong>Performans İyileştirmesi:</strong> Oyun performansını optimize
-          etmek
-        </li>
-        <li>
-          <strong>Hata Giderme:</strong> Teknik sorunları tespit etmek ve çözmek
-        </li>
-        <li>
-          <strong>Özelleştirme:</strong> Tercih ettiğiniz oyun ayarlarını
-          hatırlamak
-        </li>
-      </ul>
+            ul li::marker {
+                color: #667eea;
+                font-weight: bold;
+            }
 
-      <h2>4. Veri Depolama ve Güvenlik</h2>
-      <ul>
-        <li>
-          <strong>Yerel Depolama:</strong> Tüm oyun verileri sadece cihazınızda
-          saklanır
-        </li>
-        <li>
-          <strong>Şifreleme:</strong> Hassas veriler Android Keystore ile
-          şifrelenir
-        </li>
-        <li>
-          <strong>Erişim Kontrolü:</strong> Sadece Color Gate uygulaması
-          verilerinize erişebilir
-        </li>
-        <li>
-          <strong>Yedekleme:</strong> Veriler cihaz yedekleme sistemine dahil
-          edilmez
-        </li>
-      </ul>
+            a {
+                color: #667eea;
+                text-decoration: none;
+                font-weight: 500;
+                position: relative;
+                transition: all 0.3s ease;
+            }
 
-      <h2>5. Üçüncü Taraf Paylaşımı</h2>
-      <p>
-        Belirli hizmetlerin sağlanması için güvenilir üçüncü taraf
-        sağlayıcılarla sınırlı veri paylaşımı yapılabilir:
-      </p>
-      <ul>
-        <li>
-          <strong>Reklam Sağlayıcıları:</strong> Google AdMob, Google Play
-          Reklamları, Facebook Audience Network gibi
-        </li>
-        <li>
-          <strong>Analitik Hizmetleri:</strong> Google Analytics, Firebase gibi
-        </li>
-        <li>
-          <strong>Çökme Raporlama:</strong> Crashlytics gibi hata izleme
-          servisleri
-        </li>
-      </ul>
+            a:hover {
+                color: #764ba2;
+                text-decoration: none;
+            }
 
-      <p>
-        Bu sağlayıcılar kendi gizlilik politikalarına tabidir ve verilerinizi
-        kendi politikaları çerçevesinde işlerler.
-      </p>
+            a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background: linear-gradient(90deg, #667eea, #764ba2);
+                transition: width 0.3s ease;
+            }
 
-      <h2>6. Yaş Kısıtlaması ve Kullanım</h2>
-      <p>
-        Color Gate genel kullanıcı kitlesine yönelik tasarlanmış bir oyundur.
-        Uygulama 13 yaş ve üzeri kullanıcılar için uygundur. 13 yaş altı
-        kullanıcıların ebeveyn gözetiminde uygulamayı kullanması önerilir.
-      </p>
+            a:hover::after {
+                width: 100%;
+            }
 
-      <h2>7. Kullanıcı Hakları</h2>
-      <h3>Verilerinizi Kontrol Etme:</h3>
-      <ul>
-        <li>
-          <strong>Görüntüleme:</strong> Oyun içi menüden tüm verilerinizi
-          görüntüleyebilirsiniz
-        </li>
-        <li>
-          <strong>Silme:</strong> Oyun geçmişinizi istediğiniz zaman
-          silebilirsiniz
-        </li>
-        <li>
-          <strong>Sıfırlama:</strong> Tüm oyun verilerini sıfırlayabilirsiniz
-        </li>
-        <li><strong>Dışa Aktarma:</strong> Skorlarınızı paylaşabilirsiniz</li>
-      </ul>
+            p {
+                margin-top: 12px;
+                margin-bottom: 18px;
+                line-height: 1.8;
+                color: #4a5568;
+            }
 
-      <h2>8. Veri Yönetimi ve Silme</h2>
-      <p>Verilerinizi yönetmek için çeşitli seçenekleriniz bulunmaktadır:</p>
-      <ul>
-        <li>
-          <strong>Oyun İçi Yönetim:</strong> Uygulama içindeki ayarlar
-          menüsünden verilerinizi görüntüleyebilir ve silebilirsiniz
-        </li>
-        <li>
-          <strong>Cihaz Ayarları:</strong> Cihazınızın uygulama ayarlarından
-          veri yönetimi yapabilirsiniz
-        </li>
-        <li>
-          <strong>Uygulama Kaldırma:</strong> Uygulamayı kaldırdığınızda yerel
-          veriler temizlenir
-        </li>
-        <li>
-          <strong>Destek Talebi:</strong>
-          <a href="mailto:developerhope4@gmail.com">developerhope4@gmail.com</a>
-          adresine yazarak destek alabilirsiniz
-        </li>
-      </ul>
+            strong {
+                color: #2d3748;
+                font-weight: 600;
+            }
 
-      <h2>9. Güvenlik ve Koruma</h2>
-      <ul>
-        <li>Veriler öncelikli olarak cihazınızda güvenli şekilde saklanır</li>
-        <li>Endüstri standardı güvenlik protokolleri kullanılır</li>
-        <li>Düzenli güvenlik güncellemeleri yapılır</li>
-        <li>Uygun güvenlik önlemleri alınır</li>
-      </ul>
+            .app-info {
+                background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+                padding: 30px;
+                border-radius: 16px;
+                margin-bottom: 40px;
+                box-shadow: 0 10px 30px rgba(253, 203, 110, 0.3);
+                border: none;
+                position: relative;
+                overflow: hidden;
+            }
 
-      <h2>10. Politika Değişiklikleri</h2>
-      <p>
-        Bu Gizlilik Politikası gerektiğinde güncellenebilir. Önemli
-        değişiklikler olduğunda:
-      </p>
-      <ul>
-        <li>Uygulama içi bildirim gösterilir</li>
-        <li>Bu sayfa güncellenir</li>
-        <li>E-posta ile bilgilendirme yapılabilir (iletişim bilginiz varsa)</li>
-      </ul>
+            .app-info::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(
+                    circle,
+                    rgba(255, 255, 255, 0.3) 0%,
+                    transparent 70%
+                );
+                animation: shimmer 3s infinite;
+            }
 
-      <h2>11. Platform Özellikleri</h2>
-      <h3>Android:</h3>
-      <ul>
-        <li>SharedPreferences ile güvenli veri saklama</li>
-        <li>Android izin sistemi kullanılır</li>
-        <li>Google Play Store politikalarına uyum</li>
-      </ul>
+            @keyframes shimmer {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+                50% {
+                    transform: translate(10px, 10px);
+                }
+            }
 
-      <h3>Windows:</h3>
-      <ul>
-        <li>Windows veri koruma standartları</li>
-        <li>Kullanıcı klasöründe güvenli depolama</li>
-      </ul>
+            .app-info p {
+                color: #2d3748;
+                margin: 8px 0;
+                position: relative;
+                z-index: 1;
+            }
 
-      <h3>Web:</h3>
-      <ul>
-        <li>LocalStorage kullanımı</li>
-        <li>HTTPS güvenlik protokolü</li>
-        <li>Çerez kullanımı yok</li>
-      </ul>
+            .highlight {
+                background: linear-gradient(135deg, #a8e6ff 0%, #74b9ff 100%);
+                padding: 25px;
+                border-radius: 16px;
+                margin: 25px 0;
+                box-shadow: 0 8px 25px rgba(116, 185, 255, 0.3);
+                border: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
 
-      <h2>12. İletişim ve Destek</h2>
-      <p>
-        Gizlilik konularında sorularınız veya endişeleriniz varsa bizimle
-        iletişime geçebilirsiniz:
-      </p>
-      <ul>
-        <li>
-          <strong>E-posta:</strong>
-          <a href="mailto:developerhope4@gmail.com">developerhope4@gmail.com</a>
-        </li>
-        <li>
-          <strong>Konu:</strong> "Color Gate - Gizlilik Politikası" başlığını
-          kullanın
-        </li>
-        <li>
-          <strong>Yanıt Süresi:</strong> 1 hafta içinde geri dönüş yapılır
-        </li>
-      </ul>
+            .highlight:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(116, 185, 255, 0.4);
+            }
 
-      <h2>13. Yasal Uyum</h2>
-      <p>Bu politika aşağıdaki düzenlemelere uygun olarak hazırlanmıştır:</p>
-      <ul>
-        <li>Türkiye Kişisel Verilerin Korunması Kanunu (KVKK)</li>
-        <li>Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR)</li>
-        <li>Google Play Store Geliştirici Politikaları</li>
-        <li>Çocukları Çevrimiçi Gizlilik Koruma Yasası (COPPA)</li>
-      </ul>
+            .highlight p {
+                color: #1a202c;
+                margin: 0;
+            }
 
-      <div class="highlight">
-        <p>
-          <strong>Son Söz:</strong> Color Gate, gizliliğinizi önemseyen eğlenceli
-          bir oyundur. Verilerinizi mümkün olan en güvenli şekilde işlemeye ve
-          korumaya devam edeceğiz. Oyunun keyfini çıkarın!
-        </p>
-      </div>
+            .highlight strong {
+                color: #0c4a6e;
+            }
 
-      <p style="text-align: center; margin-top: 40px; color: #666">
-        <small>Bu doküman Color Gate uygulaması için hazırlanmıştır.</small>
-      </p>
-    </div>
-  </body>
+            @media (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+
+                .container {
+                    padding: 30px 20px;
+                    border-radius: 15px;
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+
+                h2 {
+                    font-size: 1.4em;
+                }
+
+                h3 {
+                    font-size: 1.15em;
+                }
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            ul li {
+                transition: transform 0.2s ease;
+            }
+
+            ul li:hover {
+                transform: translateX(5px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Gizlilik Politikası</h1>
+
+            <div class="app-info">
+                <p><strong>Son Güncelleme:</strong> 16.11.2025</p>
+                <p><strong>Yayıncı:</strong> Developer Hope</p>
+                <p>
+                    <strong>Uygulama Adı:</strong> Renk Kapısı: Sonsuz Labirent
+                </p>
+                <p>
+                    <strong>Uygulama Türü:</strong> Renk Eşleştirme Arcade Oyunu
+                </p>
+                <p>
+                    <strong>İletişim:</strong>
+                    <a href="mailto:developerhope4@gmail.com"
+                        >developerhope4@gmail.com</a
+                    >
+                </p>
+            </div>
+
+            <h2>1. Giriş</h2>
+            <p>
+                Renk Kapısı: Sonsuz Labirent mobil ve masaüstü oyunu
+                ("Uygulama"), kullanıcıların kişisel verilerini korumayı
+                önemsemektedir. Bu Gizlilik Politikası, oyunumuzu
+                kullandığınızda topladığımız verileri, bunların nasıl
+                kullanıldığını ve korunduğunu açıklamaktadır. Uygulamayı
+                kullanarak bu politikayı kabul etmiş sayılırsınız.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    <strong>Önemli:</strong> Renk Kapısı: Sonsuz Labirent temel
+                    olarak çevrimdışı çalışan bir oyundur ancak gelişmiş
+                    özellikler için internet bağlantısı kullanabilir.
+                </p>
+            </div>
+
+            <h2>2. Topladığımız Veriler</h2>
+
+            <h3>A. Oyun Verileri (Yerel Depolama):</h3>
+            <ul>
+                <li>
+                    <strong>Oyun Skorları:</strong> En yüksek skorunuz ve oyun
+                    geçmişiniz
+                </li>
+                <li>
+                    <strong>Oyun Tercihleri:</strong> Zorluk seviyesi, kapı
+                    sayısı seçimleri
+                </li>
+                <li>
+                    <strong>Oyun İstatistikleri:</strong> Oynanan oyun sayısı,
+                    tarih bilgileri
+                </li>
+                <li>
+                    <strong>Uygulama Ayarları:</strong> Oyun modları ve
+                    özelleştirmeler
+                </li>
+            </ul>
+
+            <p>
+                <strong
+                    >Oyun verileri öncelikli olarak cihazınızda
+                    saklanır.</strong
+                >
+            </p>
+
+            <h3>B. Cihaz Bilgileri (Otomatik Toplanan):</h3>
+            <ul>
+                <li>
+                    İşletim sistemi versiyonu (performans optimizasyonu için)
+                </li>
+                <li>Ekran çözünürlüğü (oyun deneyimi iyileştirmesi için)</li>
+                <li>Uygulama çökme raporları (hata ayıklama için)</li>
+                <li>
+                    Reklam kimliği (kişiselleştirilmiş reklam gösterimi için)
+                </li>
+                <li>Kullanım istatistikleri (uygulama iyileştirmesi için)</li>
+            </ul>
+
+            <h3>C. Reklam ve Analitik Verileri:</h3>
+            <ul>
+                <li>Reklam etkileşim verileri (tıklama, görüntüleme)</li>
+                <li>Demografik bilgiler (yaş grubu, ilgi alanları - anonim)</li>
+                <li>Uygulama kullanım süresi ve sıklığı</li>
+                <li>Oyun içi etkinlik verileri (analitik amaçlı)</li>
+            </ul>
+
+            <h3>D. Genel Olarak Toplamadığımız Veriler:</h3>
+            <ul>
+                <li>Ad, soyad, doğrudan kimlik bilgileri</li>
+                <li>Telefon numarası</li>
+                <li>Hassas kişisel bilgiler</li>
+                <li>Finansal bilgiler</li>
+            </ul>
+
+            <h2>3. Verilerin Kullanım Amacı</h2>
+            <p>
+                Topladığımız sınırlı veriler yalnızca şu amaçlarla kullanılır:
+            </p>
+            <ul>
+                <li>
+                    <strong>Oyun Deneyimi:</strong> Skorlarınızı kaydetmek ve
+                    oyun ilerlemesini takip etmek
+                </li>
+                <li>
+                    <strong>Performans İyileştirmesi:</strong> Oyun
+                    performansını optimize etmek
+                </li>
+                <li>
+                    <strong>Hata Giderme:</strong> Teknik sorunları tespit etmek
+                    ve çözmek
+                </li>
+                <li>
+                    <strong>Özelleştirme:</strong> Tercih ettiğiniz oyun
+                    ayarlarını hatırlamak
+                </li>
+            </ul>
+
+            <h2>4. Veri Depolama ve Güvenlik</h2>
+            <ul>
+                <li>
+                    <strong>Yerel Depolama:</strong> Tüm oyun verileri sadece
+                    cihazınızda saklanır
+                </li>
+                <li>
+                    <strong>Şifreleme:</strong> Hassas veriler Android Keystore
+                    ile şifrelenir
+                </li>
+                <li>
+                    <strong>Erişim Kontrolü:</strong> Sadece Renk Kapısı: Sonsuz
+                    Labirent uygulaması verilerinize erişebilir
+                </li>
+                <li>
+                    <strong>Yedekleme:</strong> Veriler cihaz yedekleme
+                    sistemine dahil edilmez
+                </li>
+            </ul>
+
+            <h2>5. Üçüncü Taraf Paylaşımı</h2>
+            <p>
+                Belirli hizmetlerin sağlanması için güvenilir üçüncü taraf
+                sağlayıcılarla sınırlı veri paylaşımı yapılabilir:
+            </p>
+            <ul>
+                <li>
+                    <strong>Reklam Sağlayıcıları:</strong> Google AdMob, Google
+                    Play Reklamları, Facebook Audience Network gibi
+                </li>
+                <li>
+                    <strong>Analitik Hizmetleri:</strong> Google Analytics,
+                    Firebase gibi
+                </li>
+                <li>
+                    <strong>Çökme Raporlama:</strong> Crashlytics gibi hata
+                    izleme servisleri
+                </li>
+            </ul>
+
+            <p>
+                Bu sağlayıcılar kendi gizlilik politikalarına tabidir ve
+                verilerinizi kendi politikaları çerçevesinde işlerler.
+            </p>
+
+            <h2>6. Yaş Kısıtlaması ve Kullanım</h2>
+            <p>
+                Renk Kapısı: Sonsuz Labirent genel kullanıcı kitlesine yönelik
+                tasarlanmış bir oyundur. Uygulama 13 yaş ve üzeri kullanıcılar
+                için uygundur. 13 yaş altı kullanıcıların ebeveyn gözetiminde
+                uygulamayı kullanması önerilir.
+            </p>
+
+            <h2>7. Kullanıcı Hakları</h2>
+            <h3>Verilerinizi Kontrol Etme:</h3>
+            <ul>
+                <li>
+                    <strong>Görüntüleme:</strong> Oyun içi menüden tüm
+                    verilerinizi görüntüleyebilirsiniz
+                </li>
+                <li>
+                    <strong>Silme:</strong> Oyun geçmişinizi istediğiniz zaman
+                    silebilirsiniz
+                </li>
+                <li>
+                    <strong>Sıfırlama:</strong> Tüm oyun verilerini
+                    sıfırlayabilirsiniz
+                </li>
+                <li>
+                    <strong>Dışa Aktarma:</strong> Skorlarınızı
+                    paylaşabilirsiniz
+                </li>
+            </ul>
+
+            <h2>8. Veri Yönetimi ve Silme</h2>
+            <p>
+                Verilerinizi yönetmek için çeşitli seçenekleriniz bulunmaktadır:
+            </p>
+            <ul>
+                <li>
+                    <strong>Oyun İçi Yönetim:</strong> Uygulama içindeki ayarlar
+                    menüsünden verilerinizi görüntüleyebilir ve silebilirsiniz
+                </li>
+                <li>
+                    <strong>Cihaz Ayarları:</strong> Cihazınızın uygulama
+                    ayarlarından veri yönetimi yapabilirsiniz
+                </li>
+                <li>
+                    <strong>Uygulama Kaldırma:</strong> Uygulamayı
+                    kaldırdığınızda yerel veriler temizlenir
+                </li>
+                <li>
+                    <strong>Destek Talebi:</strong>
+                    <a href="mailto:developerhope4@gmail.com"
+                        >developerhope4@gmail.com</a
+                    >
+                    adresine yazarak destek alabilirsiniz
+                </li>
+            </ul>
+
+            <h2>9. Güvenlik ve Koruma</h2>
+            <ul>
+                <li>
+                    Veriler öncelikli olarak cihazınızda güvenli şekilde
+                    saklanır
+                </li>
+                <li>Endüstri standardı güvenlik protokolleri kullanılır</li>
+                <li>Düzenli güvenlik güncellemeleri yapılır</li>
+                <li>Uygun güvenlik önlemleri alınır</li>
+            </ul>
+
+            <h2>10. Politika Değişiklikleri</h2>
+            <p>
+                Bu Gizlilik Politikası gerektiğinde güncellenebilir. Önemli
+                değişiklikler olduğunda:
+            </p>
+            <ul>
+                <li>Uygulama içi bildirim gösterilir</li>
+                <li>Bu sayfa güncellenir</li>
+                <li>
+                    E-posta ile bilgilendirme yapılabilir (iletişim bilginiz
+                    varsa)
+                </li>
+            </ul>
+
+            <h2>11. Platform Özellikleri</h2>
+            <h3>Android:</h3>
+            <ul>
+                <li>SharedPreferences ile güvenli veri saklama</li>
+                <li>Android izin sistemi kullanılır</li>
+                <li>Google Play Store politikalarına uyum</li>
+            </ul>
+
+            <h3>Windows:</h3>
+            <ul>
+                <li>Windows veri koruma standartları</li>
+                <li>Kullanıcı klasöründe güvenli depolama</li>
+            </ul>
+
+            <h3>Web:</h3>
+            <ul>
+                <li>LocalStorage kullanımı</li>
+                <li>HTTPS güvenlik protokolü</li>
+                <li>Çerez kullanımı yok</li>
+            </ul>
+
+            <h2>12. İletişim ve Destek</h2>
+            <p>
+                Gizlilik konularında sorularınız veya endişeleriniz varsa
+                bizimle iletişime geçebilirsiniz:
+            </p>
+            <ul>
+                <li>
+                    <strong>E-posta:</strong>
+                    <a href="mailto:developerhope4@gmail.com"
+                        >developerhope4@gmail.com</a
+                    >
+                </li>
+                <li>
+                    <strong>Konu:</strong> "Renk Kapısı: Sonsuz Labirent -
+                    Gizlilik Politikası" başlığını kullanın
+                </li>
+                <li>
+                    <strong>Yanıt Süresi:</strong> 1 hafta içinde geri dönüş
+                    yapılır
+                </li>
+            </ul>
+
+            <h2>13. Yasal Uyum</h2>
+            <p>
+                Bu politika aşağıdaki düzenlemelere uygun olarak hazırlanmıştır:
+            </p>
+            <ul>
+                <li>Türkiye Kişisel Verilerin Korunması Kanunu (KVKK)</li>
+                <li>Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR)</li>
+                <li>Google Play Store Geliştirici Politikaları</li>
+                <li>Çocukları Çevrimiçi Gizlilik Koruma Yasası (COPPA)</li>
+            </ul>
+
+            <div class="highlight">
+                <p>
+                    <strong>Son Söz:</strong> Renk Kapısı: Sonsuz Labirent,
+                    gizliliğinizi önemseyen eğlenceli bir oyundur. Verilerinizi
+                    mümkün olan en güvenli şekilde işlemeye ve korumaya devam
+                    edeceğiz. Oyunun keyfini çıkarın!
+                </p>
+            </div>
+
+            <p
+                style="
+                    text-align: center;
+                    margin-top: 50px;
+                    color: #666;
+                    border-top: 2px solid #ecf0f1;
+                    padding-top: 20px;
+                "
+            >
+                <small>
+                    Bu doküman Renk Kapısı: Sonsuz Labirent uygulaması için
+                    hazırlanmıştır.<br />
+                    Son Güncelleme: 16.11.2025<br />
+                    © 2025 Developer Hope. Tüm hakları saklıdır.
+                </small>
+            </p>
+        </div>
+    </body>
 </html>
