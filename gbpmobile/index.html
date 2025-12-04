@@ -36,40 +36,69 @@
         <link rel="manifest" href="manifest.json" />
     </head>
     <body>
-        <div id="loading" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #1a1a2e; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: sans-serif; color: white;">
-            <div style="font-size: 24px; margin-bottom: 20px;">GBP Mobile</div>
-            <div id="status" style="font-size: 14px; color: #888;">Yükleniyor...</div>
-            <div id="error" style="font-size: 12px; color: #ff6b6b; margin-top: 10px; max-width: 80%; text-align: center;"></div>
+        <div
+            id="loading"
+            style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #1a1a2e;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: sans-serif;
+                color: white;
+            "
+        >
+            <div style="font-size: 24px; margin-bottom: 20px">GBP Mobile</div>
+            <div id="status" style="font-size: 14px; color: #888">
+                Yükleniyor...
+            </div>
+            <div
+                id="error"
+                style="
+                    font-size: 12px;
+                    color: #ff6b6b;
+                    margin-top: 10px;
+                    max-width: 80%;
+                    text-align: center;
+                "
+            ></div>
         </div>
-        
+
         <script>
             function log(msg) {
                 console.log('[GBP] ' + msg);
                 var status = document.getElementById('status');
                 if (status) status.textContent = msg;
             }
-            
+
             function showError(msg) {
                 console.error('[GBP ERROR] ' + msg);
                 var error = document.getElementById('error');
                 if (error) error.textContent = msg;
             }
-            
-            window.onerror = function(msg, url, line, col, error) {
+
+            window.onerror = function (msg, url, line, col, error) {
                 showError('JS Error: ' + msg + ' at ' + url + ':' + line);
                 return false;
             };
-            
-            window.addEventListener('unhandledrejection', function(event) {
+
+            window.addEventListener('unhandledrejection', function (event) {
                 showError('Promise Error: ' + event.reason);
             });
-            
+
             log('HTML loaded, starting Flutter...');
         </script>
-        
-        <script src="flutter_bootstrap.js" async 
-            onload="log('Flutter bootstrap loaded')" 
-            onerror="showError('flutter_bootstrap.js yüklenemedi!')">
-        </script>
+
+        <script
+            src="flutter_bootstrap.js"
+            async
+            onload="log('Flutter bootstrap loaded')"
+            onerror="showError('flutter_bootstrap.js yüklenemedi!')"
+        ></script>
     </body>
 </html>
