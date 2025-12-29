@@ -461,6 +461,77 @@
                         <img src="images/icons/mixer.png" alt="demo" />Skills
                     </h4>
                 </div>
+                <style>
+                    .skill-tag {
+                        display: inline-block;
+                        padding: 10px 16px;
+                        margin: 5px;
+                        background: rgba(255, 255, 255, 0.95);
+                        border-radius: 25px;
+                        font-size: 13px;
+                        color: #333;
+                        border: none;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                    }
+                    .skill-tag:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+                    }
+                    .skill-category {
+                        margin-bottom: 30px;
+                    }
+                    .skill-category-header {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 18px;
+                        padding: 12px 20px;
+                        border-radius: 8px;
+                        color: #fff;
+                    }
+                    .skill-category-header.dev {
+                        background: linear-gradient(
+                            135deg,
+                            #667eea 0%,
+                            #764ba2 100%
+                        );
+                    }
+                    .skill-category-header.data {
+                        background: linear-gradient(
+                            135deg,
+                            #11998e 0%,
+                            #38ef7d 100%
+                        );
+                    }
+                    .skill-category-header.arch {
+                        background: linear-gradient(
+                            135deg,
+                            #ee0979 0%,
+                            #ff6a00 100%
+                        );
+                    }
+                    .skill-category-header.devops {
+                        background: linear-gradient(
+                            135deg,
+                            #4776e6 0%,
+                            #8e54e9 100%
+                        );
+                    }
+                    .skill-category-icon {
+                        font-size: 24px;
+                        margin-right: 12px;
+                        opacity: 0.9;
+                    }
+                    .skill-category-title {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin: 0;
+                        letter-spacing: 0.5px;
+                    }
+                    .skill-tags-container {
+                        padding: 5px 0;
+                    }
+                </style>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div id="skills-card" class="card">
@@ -468,332 +539,354 @@
                                 <div class="row">
                                     <!-- Software Development -->
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="skills-title">
-                                            <h6 class="text-center">
-                                                Software Development
-                                            </h6>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
+                                        <div class="skill-category">
+                                            <div
+                                                class="skill-category-header dev"
+                                            >
+                                                <i
+                                                    class="fa fa-code skill-category-icon"
+                                                ></i>
                                                 <span
+                                                    class="skill-category-title"
+                                                    >Software Development</span
+                                                >
+                                            </div>
+                                            <div class="skill-tags-container">
+                                                <span class="skill-tag"
                                                     >.NET / .NET Core / .NET
                                                     9</span
                                                 >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >C# / ASP.NET MVC / Web
-                                                    API</span
+                                                <span class="skill-tag"
+                                                    >C#</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >ASP.NET MVC</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Web API</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Entity Framework Core</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >LINQ</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Angular</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >TypeScript</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >RESTful API</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Swagger / OpenAPI</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Entity Framework Core /
-                                                    LINQ</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Angular / TypeScript</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >RESTful API / Swagger /
-                                                    OpenAPI</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
                                         </div>
                                     </div>
 
                                     <!-- Data Management -->
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="skills-title">
-                                            <h6 class="text-center">
-                                                Data Management
-                                            </h6>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
+                                        <div class="skill-category">
+                                            <div
+                                                class="skill-category-header data"
+                                            >
+                                                <i
+                                                    class="fa fa-database skill-category-icon"
+                                                ></i>
                                                 <span
-                                                    >MS SQL Server / T-SQL</span
+                                                    class="skill-category-title"
+                                                    >Data Management</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Redis / DAPR /
-                                                    RabbitMQ</span
+                                            <div class="skill-tags-container">
+                                                <span class="skill-tag"
+                                                    >MS SQL Server</span
                                                 >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Query Tuning / Performance
+                                                <span class="skill-tag"
+                                                    >T-SQL</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >PL/SQL</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Redis</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >DAPR</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >RabbitMQ</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Query Tuning</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Performance
                                                     Optimization</span
                                                 >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Stored Procedure /
-                                                    Function</span
+                                                <span class="skill-tag"
+                                                    >Stored Procedures</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span>PL/SQL</span>
-                                            </div>
-                                            <div class="skillbar-bar"></div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row" style="margin-top: 20px">
+                                <div class="row">
                                     <!-- Architecture & System -->
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="skills-title">
-                                            <h6 class="text-center">
-                                                Architecture & System
-                                            </h6>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
+                                        <div class="skill-category">
+                                            <div
+                                                class="skill-category-header arch"
+                                            >
+                                                <i
+                                                    class="fa fa-sitemap skill-category-icon"
+                                                ></i>
                                                 <span
-                                                    >Microservices
-                                                    Architecture</span
+                                                    class="skill-category-title"
+                                                    >Architecture & System</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Clean Architecture /
-                                                    SOLID</span
+                                            <div class="skill-tags-container">
+                                                <span class="skill-tag"
+                                                    >Microservices</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Clean Architecture</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >SOLID</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >CQRS</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Dependency Injection</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Layered Architecture</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Docker</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >APISIX</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Unit Test</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Integration Test</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >CQRS / DI / Layered
-                                                    Architecture</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="85%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Docker / APISIX /
-                                                    Workflow</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Unit Test / Integration
-                                                    Test</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
                                         </div>
                                     </div>
 
                                     <!-- DevOps & Tools -->
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="skills-title">
-                                            <h6 class="text-center">
-                                                DevOps & Tools
-                                            </h6>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
+                                        <div class="skill-category">
+                                            <div
+                                                class="skill-category-header devops"
+                                            >
+                                                <i
+                                                    class="fa fa-cogs skill-category-icon"
+                                                ></i>
                                                 <span
-                                                    >Git / GitFlow / Branch
-                                                    Policy</span
+                                                    class="skill-category-title"
+                                                    >DevOps & Tools</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="100%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Azure DevOps / CI/CD
-                                                    Pipeline</span
+                                            <div class="skill-tags-container">
+                                                <span class="skill-tag"
+                                                    >Git</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >GitFlow</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Azure DevOps</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >CI/CD Pipeline</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Agile / Scrum</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Kanban</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Code Review</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Release Management</span
+                                                >
+                                                <span class="skill-tag"
+                                                    >Jenkins</span
                                                 >
                                             </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Agile / Scrum /
-                                                    Kanban</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="90%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Code Review / Release
-                                                    Management</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
-                                        </div>
-                                        <!-- SKILL BAR -->
-                                        <div
-                                            class="skillbar"
-                                            data-percent="85%"
-                                        >
-                                            <div class="skillbar-title">
-                                                <span
-                                                    >Jenkins / Logging &
-                                                    Monitoring</span
-                                                >
-                                            </div>
-                                            <div class="skillbar-bar"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Domain Expertise -->
-                                <div class="row" style="margin-top: 20px">
+                                <div class="row" style="margin-top: 30px">
                                     <div class="col-md-12">
                                         <div class="skills-title">
                                             <h6 class="text-center">
                                                 Domain Expertise
                                             </h6>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 15px">
+                                    <!-- Banking Applications -->
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
                                         <div
-                                            class="card-content"
-                                            style="padding: 15px"
+                                            style="
+                                                text-align: center;
+                                                padding: 20px;
+                                                background: linear-gradient(
+                                                    135deg,
+                                                    #1a237e 0%,
+                                                    #3949ab 100%
+                                                );
+                                                border-radius: 8px;
+                                                color: #fff;
+                                                min-height: 180px;
+                                                margin-bottom: 15px;
+                                            "
                                         >
-                                            <p>
-                                                <strong
-                                                    >Banking
-                                                    Applications:</strong
-                                                >
-                                                Credit Processes, Application
-                                                Screens, Campaign Management
+                                            <i
+                                                class="fa fa-university"
+                                                style="
+                                                    font-size: 36px;
+                                                    margin-bottom: 12px;
+                                                    opacity: 0.9;
+                                                "
+                                            ></i>
+                                            <h6
+                                                style="
+                                                    color: #fff;
+                                                    font-weight: 600;
+                                                    margin-bottom: 10px;
+                                                    font-size: 14px;
+                                                "
+                                            >
+                                                Banking Applications
+                                            </h6>
+                                            <p
+                                                style="
+                                                    font-size: 12px;
+                                                    line-height: 1.6;
+                                                    margin: 0;
+                                                    opacity: 0.9;
+                                                "
+                                            >
+                                                Credit Processes<br />
+                                                Application Screens<br />
+                                                Campaign Management
                                             </p>
-                                            <p>
-                                                <strong
-                                                    >Automotive Systems:</strong
-                                                >
-                                                Production Tracking, Route
-                                                Management, Energy Monitoring
+                                        </div>
+                                    </div>
+                                    <!-- Automotive Systems -->
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div
+                                            style="
+                                                text-align: center;
+                                                padding: 20px;
+                                                background: linear-gradient(
+                                                    135deg,
+                                                    #004d40 0%,
+                                                    #00897b 100%
+                                                );
+                                                border-radius: 8px;
+                                                color: #fff;
+                                                min-height: 180px;
+                                                margin-bottom: 15px;
+                                            "
+                                        >
+                                            <i
+                                                class="fa fa-car"
+                                                style="
+                                                    font-size: 36px;
+                                                    margin-bottom: 12px;
+                                                    opacity: 0.9;
+                                                "
+                                            ></i>
+                                            <h6
+                                                style="
+                                                    color: #fff;
+                                                    font-weight: 600;
+                                                    margin-bottom: 10px;
+                                                    font-size: 14px;
+                                                "
+                                            >
+                                                Automotive Systems
+                                            </h6>
+                                            <p
+                                                style="
+                                                    font-size: 12px;
+                                                    line-height: 1.6;
+                                                    margin: 0;
+                                                    opacity: 0.9;
+                                                "
+                                            >
+                                                Production Tracking<br />
+                                                Route Management<br />
+                                                Energy Monitoring
                                             </p>
-                                            <p>
-                                                <strong
-                                                    >Enterprise
-                                                    Applications:</strong
-                                                >
-                                                Human Resources, Parts and Stock
-                                                Management, Authorization
+                                        </div>
+                                    </div>
+                                    <!-- Enterprise Applications -->
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div
+                                            style="
+                                                text-align: center;
+                                                padding: 20px;
+                                                background: linear-gradient(
+                                                    135deg,
+                                                    #bf360c 0%,
+                                                    #ff7043 100%
+                                                );
+                                                border-radius: 8px;
+                                                color: #fff;
+                                                min-height: 180px;
+                                                margin-bottom: 15px;
+                                            "
+                                        >
+                                            <i
+                                                class="fa fa-building"
+                                                style="
+                                                    font-size: 36px;
+                                                    margin-bottom: 12px;
+                                                    opacity: 0.9;
+                                                "
+                                            ></i>
+                                            <h6
+                                                style="
+                                                    color: #fff;
+                                                    font-weight: 600;
+                                                    margin-bottom: 10px;
+                                                    font-size: 14px;
+                                                "
+                                            >
+                                                Enterprise Applications
+                                            </h6>
+                                            <p
+                                                style="
+                                                    font-size: 12px;
+                                                    line-height: 1.6;
+                                                    margin: 0;
+                                                    opacity: 0.9;
+                                                "
+                                            >
+                                                Human Resources<br />
+                                                Parts & Stock Management<br />
+                                                Authorization
                                             </p>
                                         </div>
                                     </div>
