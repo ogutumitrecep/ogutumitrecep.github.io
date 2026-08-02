@@ -248,14 +248,19 @@
             <h1>Gizlilik Politikası</h1>
 
             <div class="app-info">
-                <p><strong>Son Güncelleme:</strong> 16.11.2025</p>
+                <p><strong>Son Güncelleme:</strong> 02.08.2026</p>
                 <p><strong>Yayıncı:</strong> Developer Hope</p>
                 <p>
                     <strong>Uygulama Adı:</strong> Renk Kapısı: Sonsuz Labirent
+                    (Color Gate)
+                </p>
+                <p>
+                    <strong>Paket Adı:</strong> com.developerhope.colorgate
                 </p>
                 <p>
                     <strong>Uygulama Türü:</strong> Renk Eşleştirme Arcade Oyunu
                 </p>
+                <p><strong>Platform:</strong> Android</p>
                 <p>
                     <strong>İletişim:</strong>
                     <a href="mailto:developerhope4@gmail.com"
@@ -266,253 +271,338 @@
 
             <h2>1. Giriş</h2>
             <p>
-                Renk Kapısı: Sonsuz Labirent mobil ve masaüstü oyunu
-                ("Uygulama"), kullanıcıların kişisel verilerini korumayı
-                önemsemektedir. Bu Gizlilik Politikası, oyunumuzu
-                kullandığınızda topladığımız verileri, bunların nasıl
-                kullanıldığını ve korunduğunu açıklamaktadır. Uygulamayı
-                kullanarak bu politikayı kabul etmiş sayılırsınız.
+                Renk Kapısı: Sonsuz Labirent ("Uygulama"), kullanıcılarının
+                kişisel verilerini korumayı önemsemektedir. Bu Gizlilik
+                Politikası; hangi verilerin toplandığını, bunların hangi amaçla
+                kullanıldığını, kimlerle paylaşıldığını ve bu veriler üzerinde
+                hangi haklara sahip olduğunuzu açıklar. Uygulamayı kullanarak bu
+                politikayı kabul etmiş sayılırsınız.
             </p>
 
             <div class="highlight">
                 <p>
-                    <strong>Önemli:</strong> Renk Kapısı: Sonsuz Labirent temel
-                    olarak çevrimdışı çalışan bir oyundur ancak gelişmiş
-                    özellikler için internet bağlantısı kullanabilir.
+                    <strong>Özetle:</strong> Oyun verileriniz (skorlar,
+                    geçmişiniz, ayarlarınız) yalnızca kendi cihazınızda saklanır;
+                    bizim sunucumuza gönderilmez. Uygulamanın internet
+                    kullandığı yerler reklam gösterimi, anonim kullanım
+                    analitiği, çökme raporları ve satın alma doğrulamasıdır.
+                    <strong>Hesap oluşturmanız gerekmez</strong> ve sizden ad,
+                    e-posta veya telefon numarası istenmez.
                 </p>
             </div>
 
             <h2>2. Topladığımız Veriler</h2>
 
-            <h3>A. Oyun Verileri (Yerel Depolama):</h3>
+            <h3>A. Yalnızca cihazınızda saklananlar</h3>
+            <p>
+                Aşağıdaki veriler Android'in yerel depolama mekanizmasıyla
+                (SharedPreferences) cihazınızda tutulur ve tarafımıza
+                gönderilmez:
+            </p>
             <ul>
+                <li><strong>En iyi skorunuz</strong></li>
                 <li>
-                    <strong>Oyun Skorları:</strong> En yüksek skorunuz ve oyun
-                    geçmişiniz
+                    <strong>Oyun geçmişiniz:</strong> en fazla son 50 oyun —
+                    skor, kapı sayısı, zorluk seviyesi ve oynama tarihi
                 </li>
                 <li>
-                    <strong>Oyun Tercihleri:</strong> Zorluk seviyesi, kapı
-                    sayısı seçimleri
+                    <strong>Ayarlarınız:</strong> ses efektleri, titreşim, renk
+                    körlüğü modu, seçili zorluk ve kapı sayısı
                 </li>
                 <li>
-                    <strong>Oyun İstatistikleri:</strong> Oynanan oyun sayısı,
-                    tarih bilgileri
+                    <strong>Reklamsız sürüm durumu:</strong> satın alma
+                    yaptıysanız bunun yerel kaydı
                 </li>
                 <li>
-                    <strong>Uygulama Ayarları:</strong> Oyun modları ve
-                    özelleştirmeler
+                    <strong>"Nasıl Oynanır" ekranının gösterilip
+                    gösterilmediği</strong>
                 </li>
             </ul>
 
+            <h3>B. Kullanım analitiği — Google Firebase Analytics</h3>
             <p>
-                <strong
-                    >Oyun verileri öncelikli olarak cihazınızda
-                    saklanır.</strong
-                >
+                Oyunun hangi bölümlerinin kullanıldığını anlamak için anonim
+                olay kayıtları toplanır:
+            </p>
+            <ul>
+                <li>Oyun başlangıcı ve bitişi, skor ve zorluk bilgisi</li>
+                <li>Ekran görüntülemeleri (menü, ayarlar, nasıl oynanır)</li>
+                <li>Ayar değişiklikleri, skor paylaşımı, reklam gösterimi</li>
+                <li>
+                    Cihaz modeli, işletim sistemi sürümü, uygulama sürümü, ülke
+                    ve dil bilgisi
+                </li>
+            </ul>
+            <p>
+                Bu kayıtlar kimliğinizle ilişkilendirilmez; toplu ve istatistiki
+                olarak değerlendirilir.
             </p>
 
-            <h3>B. Cihaz Bilgileri (Otomatik Toplanan):</h3>
+            <h3>C. Çökme raporları — Google Firebase Crashlytics</h3>
             <ul>
-                <li>
-                    İşletim sistemi versiyonu (performans optimizasyonu için)
-                </li>
-                <li>Ekran çözünürlüğü (oyun deneyimi iyileştirmesi için)</li>
-                <li>Uygulama çökme raporları (hata ayıklama için)</li>
-                <li>
-                    Reklam kimliği (kişiselleştirilmiş reklam gösterimi için)
-                </li>
-                <li>Kullanım istatistikleri (uygulama iyileştirmesi için)</li>
+                <li>Hata mesajı ve teknik yığın kaydı (stack trace)</li>
+                <li>Cihaz modeli, işletim sistemi sürümü, uygulama sürümü</li>
+                <li>Çökme anındaki uygulama durumu</li>
             </ul>
 
-            <h3>C. Reklam ve Analitik Verileri:</h3>
+            <h3>D. Reklamlar — Google AdMob</h3>
             <ul>
-                <li>Reklam etkileşim verileri (tıklama, görüntüleme)</li>
-                <li>Demografik bilgiler (yaş grubu, ilgi alanları - anonim)</li>
-                <li>Uygulama kullanım süresi ve sıklığı</li>
-                <li>Oyun içi etkinlik verileri (analitik amaçlı)</li>
+                <li>
+                    <strong>Reklam kimliği (Advertising ID):</strong> Uygulama
+                    bu amaçla <code>com.google.android.gms.permission.AD_ID</code>
+                    iznini kullanır
+                </li>
+                <li>Reklam görüntüleme ve tıklama etkileşimleri</li>
+                <li>
+                    Yaklaşık (ülke düzeyinde) konum ve genel cihaz bilgileri
+                </li>
             </ul>
+            <p>
+                Reklam verilerinin işlenmesi Google'ın kendi politikalarına
+                tabidir. Ayrıntı için 4. bölüme bakınız.
+            </p>
 
-            <h3>D. Genel Olarak Toplamadığımız Veriler:</h3>
+            <h3>E. Satın alma — Google Play Billing</h3>
             <ul>
-                <li>Ad, soyad, doğrudan kimlik bilgileri</li>
-                <li>Telefon numarası</li>
-                <li>Hassas kişisel bilgiler</li>
-                <li>Finansal bilgiler</li>
+                <li>
+                    Satın alma doğrulaması ve geri yükleme için Google Play'den
+                    dönen işlem bilgisi
+                </li>
             </ul>
+            <div class="highlight">
+                <p>
+                    <strong>Önemli:</strong> Kredi kartı, banka kartı veya
+                    herhangi bir ödeme bilgisi
+                    <strong>uygulamaya hiçbir zaman girilmez.</strong> Tüm ödeme
+                    işlemi Google Play tarafından yürütülür; biz yalnızca "satın
+                    alma tamamlandı" bilgisini alırız. Ödeme bilgilerinize
+                    erişimimiz yoktur.
+                </p>
+            </div>
+
+            <h3>F. Toplamadığımız veriler</h3>
+            <ul>
+                <li>Ad, soyad veya kullanıcı adı</li>
+                <li>E-posta adresi, telefon numarası</li>
+                <li>Hassas (GPS düzeyinde) konum</li>
+                <li>Rehber, fotoğraf, dosya, mikrofon veya kamera erişimi</li>
+                <li>Sağlık, finans veya diğer hassas kategorideki veriler</li>
+            </ul>
+            <p>
+                Uygulamada kullanıcı hesabı veya giriş sistemi
+                <strong>bulunmamaktadır.</strong>
+            </p>
 
             <h2>3. Verilerin Kullanım Amacı</h2>
-            <p>
-                Topladığımız sınırlı veriler yalnızca şu amaçlarla kullanılır:
-            </p>
             <ul>
                 <li>
-                    <strong>Oyun Deneyimi:</strong> Skorlarınızı kaydetmek ve
-                    oyun ilerlemesini takip etmek
+                    <strong>Oyun deneyimi:</strong> skorlarınızı ve
+                    tercihlerinizi hatırlamak
                 </li>
                 <li>
-                    <strong>Performans İyileştirmesi:</strong> Oyun
-                    performansını optimize etmek
+                    <strong>İyileştirme:</strong> hangi özelliklerin
+                    kullanıldığını anlayıp oyunu geliştirmek
                 </li>
                 <li>
-                    <strong>Hata Giderme:</strong> Teknik sorunları tespit etmek
-                    ve çözmek
+                    <strong>Hata giderme:</strong> çökme ve performans
+                    sorunlarını tespit edip düzeltmek
                 </li>
                 <li>
-                    <strong>Özelleştirme:</strong> Tercih ettiğiniz oyun
-                    ayarlarını hatırlamak
+                    <strong>Gelir:</strong> uygulamanın ücretsiz kalabilmesi için
+                    reklam göstermek
+                </li>
+                <li>
+                    <strong>Satın alma:</strong> reklamsız sürümü doğrulamak ve
+                    cihaz değiştirdiğinizde geri yüklemek
+                </li>
+            </ul>
+            <p>
+                Verileriniz <strong>satılmaz</strong>, pazarlama amacıyla üçüncü
+                taraflara kiralanmaz.
+            </p>
+
+            <h2>4. Reklamlar ve Onayınız</h2>
+            <p>
+                Uygulama Google AdMob üzerinden tam ekran geçiş reklamları ve
+                (etkinleştirildiğinde) isteğe bağlı ödüllü reklam gösterebilir.
+                Ödüllü reklamlar zorunlu değildir; yalnızca siz izlemeyi
+                seçerseniz gösterilir.
+            </p>
+            <h3>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre</h3>
+            <p>
+                Bu bölgelerdeki kullanıcılara, reklamlar yüklenmeden önce
+                Google'ın Kullanıcı Mesajlaşma Platformu (UMP) aracılığıyla bir
+                onay formu gösterilir. Kişiselleştirilmiş reklamları kabul edip
+                etmemek tamamen sizin tercihinizdir; onay vermemeniz durumunda
+                oyun çalışmaya devam eder.
+            </p>
+            <div class="highlight">
+                <p>
+                    <strong>Tercihinizi sonradan değiştirmek:</strong> Uygulama
+                    içinde <strong>Ayarlar → Reklamlar → Gizlilik
+                    Seçenekleri</strong> yolunu izleyerek onay tercihlerinizi
+                    istediğiniz zaman güncelleyebilirsiniz. (Bu seçenek yalnızca
+                    onay formunun geçerli olduğu bölgelerde görünür.)
+                </p>
+            </div>
+            <p>
+                Cihazınızın <strong>Ayarlar → Google → Reklamlar</strong>
+                bölümünden reklam kimliğinizi sıfırlayabilir veya
+                kişiselleştirmeyi kapatabilirsiniz.
+            </p>
+            <p>
+                <strong>Reklamsız sürümü satın aldığınızda</strong> reklam
+                yazılım geliştirme kiti hiç başlatılmaz; reklam amaçlı hiçbir
+                veri toplanmaz.
+            </p>
+
+            <h2>5. Uygulama İçi Satın Alma</h2>
+            <p>
+                Uygulamada tek seferlik, tekrarlanmayan bir
+                <strong>"Reklamları Kaldır"</strong> ürünü bulunur. Abonelik
+                değildir.
+            </p>
+            <ul>
+                <li>Satın alma Google Play hesabınıza bağlıdır</li>
+                <li>
+                    Cihaz değiştirdiğinizde Ayarlar ekranındaki "Satın Alımları
+                    Geri Yükle" ile geri getirebilirsiniz
+                </li>
+                <li>
+                    İade talepleri Google Play üzerinden yapılır ve Google'ın
+                    iade politikasına tabidir
                 </li>
             </ul>
 
-            <h2>4. Veri Depolama ve Güvenlik</h2>
+            <h2>6. Veri Depolama, Yedekleme ve Güvenlik</h2>
             <ul>
                 <li>
-                    <strong>Yerel Depolama:</strong> Tüm oyun verileri sadece
-                    cihazınızda saklanır
+                    <strong>Yerel depolama:</strong> Oyun verileriniz cihazınızda,
+                    yalnızca bu uygulamanın erişebildiği korumalı uygulama
+                    alanında (Android uygulama sanal alanı) saklanır
                 </li>
                 <li>
-                    <strong>Şifreleme:</strong> Hassas veriler Android Keystore
-                    ile şifrelenir
+                    <strong>Yedekleme:</strong> Android'in otomatik yedekleme
+                    özelliği etkinse, oyun verileriniz Google hesabınıza bağlı
+                    yedeklemeye dâhil edilebilir. Bunu cihazınızın yedekleme
+                    ayarlarından yönetebilirsiniz
                 </li>
                 <li>
-                    <strong>Erişim Kontrolü:</strong> Sadece Renk Kapısı: Sonsuz
-                    Labirent uygulaması verilerinize erişebilir
+                    <strong>Aktarım güvenliği:</strong> Google servisleriyle olan
+                    tüm iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır
                 </li>
                 <li>
-                    <strong>Yedekleme:</strong> Veriler cihaz yedekleme
-                    sistemine dahil edilmez
+                    <strong>Sunucumuz yok:</strong> Kişisel veri barındıran bir
+                    sunucu işletmiyoruz; toplanan analitik ve çökme verileri
+                    doğrudan Google altyapısında tutulur
                 </li>
             </ul>
 
-            <h2>5. Üçüncü Taraf Paylaşımı</h2>
+            <h2>7. Üçüncü Taraf Hizmetler</h2>
             <p>
-                Belirli hizmetlerin sağlanması için güvenilir üçüncü taraf
-                sağlayıcılarla sınırlı veri paylaşımı yapılabilir:
+                Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanır. Bu
+                hizmetler kendi gizlilik politikalarına tabidir:
             </p>
             <ul>
                 <li>
-                    <strong>Reklam Sağlayıcıları:</strong> Google AdMob, Google
-                    Play Reklamları, Facebook Audience Network gibi
-                </li>
-                <li>
-                    <strong>Analitik Hizmetleri:</strong> Google Analytics,
-                    Firebase gibi
-                </li>
-                <li>
-                    <strong>Çökme Raporlama:</strong> Crashlytics gibi hata
-                    izleme servisleri
-                </li>
-            </ul>
-
-            <p>
-                Bu sağlayıcılar kendi gizlilik politikalarına tabidir ve
-                verilerinizi kendi politikaları çerçevesinde işlerler.
-            </p>
-
-            <h2>6. Yaş Kısıtlaması ve Kullanım</h2>
-            <p>
-                Renk Kapısı: Sonsuz Labirent genel kullanıcı kitlesine yönelik
-                tasarlanmış bir oyundur. Uygulama 13 yaş ve üzeri kullanıcılar
-                için uygundur. 13 yaş altı kullanıcıların ebeveyn gözetiminde
-                uygulamayı kullanması önerilir.
-            </p>
-
-            <h2>7. Kullanıcı Hakları</h2>
-            <h3>Verilerinizi Kontrol Etme:</h3>
-            <ul>
-                <li>
-                    <strong>Görüntüleme:</strong> Oyun içi menüden tüm
-                    verilerinizi görüntüleyebilirsiniz
-                </li>
-                <li>
-                    <strong>Silme:</strong> Oyun geçmişinizi istediğiniz zaman
-                    silebilirsiniz
-                </li>
-                <li>
-                    <strong>Sıfırlama:</strong> Tüm oyun verilerini
-                    sıfırlayabilirsiniz
-                </li>
-                <li>
-                    <strong>Dışa Aktarma:</strong> Skorlarınızı
-                    paylaşabilirsiniz
-                </li>
-            </ul>
-
-            <h2>8. Veri Yönetimi ve Silme</h2>
-            <p>
-                Verilerinizi yönetmek için çeşitli seçenekleriniz bulunmaktadır:
-            </p>
-            <ul>
-                <li>
-                    <strong>Oyun İçi Yönetim:</strong> Uygulama içindeki ayarlar
-                    menüsünden verilerinizi görüntüleyebilir ve silebilirsiniz
-                </li>
-                <li>
-                    <strong>Cihaz Ayarları:</strong> Cihazınızın uygulama
-                    ayarlarından veri yönetimi yapabilirsiniz
-                </li>
-                <li>
-                    <strong>Uygulama Kaldırma:</strong> Uygulamayı
-                    kaldırdığınızda yerel veriler temizlenir
-                </li>
-                <li>
-                    <strong>Destek Talebi:</strong>
-                    <a href="mailto:developerhope4@gmail.com"
-                        >developerhope4@gmail.com</a
+                    <strong>Google AdMob</strong> (reklam) —
+                    <a
+                        href="https://support.google.com/admob/answer/6128543"
+                        target="_blank"
+                        rel="noopener"
+                        >AdMob ve gizlilik</a
                     >
-                    adresine yazarak destek alabilirsiniz
+                </li>
+                <li>
+                    <strong>Google Firebase Analytics</strong> (kullanım
+                    analitiği)
+                </li>
+                <li>
+                    <strong>Google Firebase Crashlytics</strong> (çökme
+                    raporlama)
+                </li>
+                <li>
+                    <strong>Google Play Billing</strong> (uygulama içi satın
+                    alma)
                 </li>
             </ul>
+            <p>
+                Tümü Google LLC tarafından sağlanmaktadır. Google'ın gizlilik
+                politikası:
+                <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener"
+                    >policies.google.com/privacy</a
+                >
+            </p>
+            <p>
+                Uygulama, Facebook/Meta dâhil başka hiçbir reklam ağı veya
+                izleme yazılımı içermez.
+            </p>
 
-            <h2>9. Güvenlik ve Koruma</h2>
+            <h2>8. Yaş Kısıtlaması</h2>
+            <p>
+                Uygulama genel kullanıcı kitlesine yöneliktir ve 13 yaş ve üzeri
+                için uygundur. Bilerek 13 yaş altındaki çocuklardan kişisel veri
+                toplamayız. 13 yaş altı bir çocuğa ait veri toplandığını
+                düşünüyorsanız lütfen bizimle iletişime geçin; ilgili veriyi
+                sileriz.
+            </p>
+
+            <h2>9. Haklarınız ve Verilerinizi Silme</h2>
+            <p>
+                KVKK ve GDPR kapsamında verilerinize erişme, düzeltme, silme ve
+                işlemeye itiraz etme haklarına sahipsiniz. Pratikte:
+            </p>
             <ul>
                 <li>
-                    Veriler öncelikli olarak cihazınızda güvenli şekilde
-                    saklanır
+                    <strong>Oyun geçmişini ve rekoru silme:</strong> Oyun içinde
+                    "Geçmiş Skorlar → Temizle"
                 </li>
-                <li>Endüstri standardı güvenlik protokolleri kullanılır</li>
-                <li>Düzenli güvenlik güncellemeleri yapılır</li>
-                <li>Uygun güvenlik önlemleri alınır</li>
+                <li>
+                    <strong>Ayarları sıfırlama:</strong> Ayarlar ekranındaki
+                    "Ayarları Sıfırla"
+                </li>
+                <li>
+                    <strong>Tüm yerel verileri silme:</strong> Uygulamayı
+                    kaldırmak veya cihaz ayarlarından uygulama verilerini
+                    temizlemek
+                </li>
+                <li>
+                    <strong>Reklam takibini sınırlama:</strong> Cihaz
+                    ayarlarından reklam kimliğini sıfırlamak
+                </li>
+                <li>
+                    <strong>Analitik/çökme verisi talebi:</strong> Bu veriler
+                    kimliğinizle ilişkilendirilmediği için kişi bazında
+                    ayrıştırılması teknik olarak mümkün değildir; yine de
+                    talepleriniz için bizimle iletişime geçebilirsiniz
+                </li>
             </ul>
 
             <h2>10. Politika Değişiklikleri</h2>
             <p>
-                Bu Gizlilik Politikası gerektiğinde güncellenebilir. Önemli
-                değişiklikler olduğunda:
+                Bu politika, uygulamaya yeni özellikler eklendikçe veya yasal
+                gereklilikler değiştikçe güncellenebilir. Güncellemeler bu
+                sayfada yayımlanır ve sayfanın üst kısmındaki "Son Güncelleme"
+                tarihi değiştirilir. Önemli değişikliklerde uygulama
+                mağazasındaki sürüm notlarında da bilgilendirme yapılır.
             </p>
+
+            <h2>11. Yasal Uyum</h2>
             <ul>
-                <li>Uygulama içi bildirim gösterilir</li>
-                <li>Bu sayfa güncellenir</li>
-                <li>
-                    E-posta ile bilgilendirme yapılabilir (iletişim bilginiz
-                    varsa)
-                </li>
+                <li>Türkiye Kişisel Verilerin Korunması Kanunu (KVKK)</li>
+                <li>Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR)</li>
+                <li>Google Play Geliştirici Program Politikaları</li>
+                <li>Google AdMob Politikaları</li>
+                <li>Çocukların Çevrimiçi Gizliliğini Koruma Yasası (COPPA)</li>
             </ul>
 
-            <h2>11. Platform Özellikleri</h2>
-            <h3>Android:</h3>
-            <ul>
-                <li>SharedPreferences ile güvenli veri saklama</li>
-                <li>Android izin sistemi kullanılır</li>
-                <li>Google Play Store politikalarına uyum</li>
-            </ul>
-
-            <h3>Windows:</h3>
-            <ul>
-                <li>Windows veri koruma standartları</li>
-                <li>Kullanıcı klasöründe güvenli depolama</li>
-            </ul>
-
-            <h3>Web:</h3>
-            <ul>
-                <li>LocalStorage kullanımı</li>
-                <li>HTTPS güvenlik protokolü</li>
-                <li>Çerez kullanımı yok</li>
-            </ul>
-
-            <h2>12. İletişim ve Destek</h2>
+            <h2>12. İletişim</h2>
             <p>
-                Gizlilik konularında sorularınız veya endişeleriniz varsa
-                bizimle iletişime geçebilirsiniz:
+                Gizlilikle ilgili soru, talep veya şikâyetleriniz için bizimle
+                iletişime geçebilirsiniz:
             </p>
             <ul>
                 <li>
@@ -523,33 +613,10 @@
                 </li>
                 <li>
                     <strong>Konu:</strong> "Renk Kapısı: Sonsuz Labirent -
-                    Gizlilik Politikası" başlığını kullanın
+                    Gizlilik"
                 </li>
-                <li>
-                    <strong>Yanıt Süresi:</strong> 1 hafta içinde geri dönüş
-                    yapılır
-                </li>
+                <li><strong>Yanıt süresi:</strong> En geç 1 hafta</li>
             </ul>
-
-            <h2>13. Yasal Uyum</h2>
-            <p>
-                Bu politika aşağıdaki düzenlemelere uygun olarak hazırlanmıştır:
-            </p>
-            <ul>
-                <li>Türkiye Kişisel Verilerin Korunması Kanunu (KVKK)</li>
-                <li>Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR)</li>
-                <li>Google Play Store Geliştirici Politikaları</li>
-                <li>Çocukları Çevrimiçi Gizlilik Koruma Yasası (COPPA)</li>
-            </ul>
-
-            <div class="highlight">
-                <p>
-                    <strong>Son Söz:</strong> Renk Kapısı: Sonsuz Labirent,
-                    gizliliğinizi önemseyen eğlenceli bir oyundur. Verilerinizi
-                    mümkün olan en güvenli şekilde işlemeye ve korumaya devam
-                    edeceğiz. Oyunun keyfini çıkarın!
-                </p>
-            </div>
 
             <p
                 style="
@@ -561,10 +628,10 @@
                 "
             >
                 <small>
-                    Bu doküman Renk Kapısı: Sonsuz Labirent uygulaması için
-                    hazırlanmıştır.<br />
-                    Son Güncelleme: 16.11.2025<br />
-                    © 2025 Developer Hope. Tüm hakları saklıdır.
+                    Bu doküman Renk Kapısı: Sonsuz Labirent (Color Gate)
+                    uygulaması için hazırlanmıştır.<br />
+                    Son Güncelleme: 02.08.2026<br />
+                    © 2026 Developer Hope. Tüm hakları saklıdır.
                 </small>
             </p>
         </div>
