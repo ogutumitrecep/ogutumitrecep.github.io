@@ -132,7 +132,7 @@
             <h1>Gizlilik Politikası</h1>
 
             <div class="info-box">
-                <p><strong>Son Güncelleme:</strong> 28.05.2026</p>
+                <p><strong>Son Güncelleme:</strong> 05.08.2026</p>
 
                 <p><strong>Yayıncı:</strong> Developer Hope</p>
 
@@ -180,6 +180,10 @@
                 <li>Advertising ID (Reklam Kimliği)</li>
                 <li>Firebase Instance ID</li>
                 <li>Uygulama Instance ID</li>
+                <li>
+                    Bildirim kayıt anahtarı (Firebase Cloud Messaging token) —
+                    yalnızca bildirimleri açtıysanız
+                </li>
             </ul>
 
             <h3>B. Uygulama Kullanım Verileri</h3>
@@ -201,6 +205,26 @@
                 <li>Uygulama sürümü</li>
             </ul>
 
+            <h3>D. Yaklaşık Konum</h3>
+
+            <p>
+                Uygulama konum izni istemez ve GPS verisine erişmez. Ancak
+                analiz hizmeti, bağlantı kurulurken görülen IP adresinden
+                şehir düzeyinde yaklaşık bir coğrafi bölge çıkarabilir. Bu
+                bilgi kimliğinizle ilişkilendirilmez ve sokak/adres düzeyinde
+                bir konum içermez.
+            </p>
+
+            <h3>E. Bildirim Verileri</h3>
+
+            <p>
+                Bildirimler varsayılan olarak <strong>kapalıdır</strong>.
+                Ayarlar ekranından açtığınızda cihazınız için bir bildirim
+                kayıt anahtarı oluşturulur ve bildirimlerin size ulaşması için
+                kullanılır. Anahtarı Ayarlar'dan kapattığınızda bu kayıt
+                silinir ve cihazınıza bildirim gönderilmesi durur.
+            </p>
+
             <h2>3. Verilerin Kullanım Amaçları</h2>
 
             <ul>
@@ -208,6 +232,10 @@
                 <li>Zikir ve sayaç deneyimini geliştirmek</li>
                 <li>Performans analizleri yapmak</li>
                 <li>Hataları tespit etmek</li>
+                <li>
+                    İzin verdiyseniz zikir hatırlatıcıları ve uygulama
+                    duyuruları göndermek
+                </li>
                 <li>Reklam hizmetleri sunmak</li>
             </ul>
 
@@ -229,6 +257,11 @@
                 <li>
                     <strong>Firebase Crashlytics</strong>
                     — Hata ve çökme raporları
+                </li>
+
+                <li>
+                    <strong>Firebase Cloud Messaging</strong>
+                    — Bildirim gönderimi (yalnızca izin verdiyseniz)
                 </li>
             </ul>
 
