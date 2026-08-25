@@ -83,6 +83,119 @@
   }
   durumRozetiBas();
 
+  // ---- Sipariş listesi: ürün seç -> WhatsApp mesajı ----
+  var sepetKutu = document.getElementById("sepet");
+  if (sepetKutu) {
+    var TEL = "905319575340";
+    var sepet = {}; // urun -> {fiyat, adet}
+    var sepetOzet = sepetKutu.querySelector("[data-sepet-ozet]");
+    var sepetListe = sepetKutu.querySelector("[data-sepet-liste]");
+    var sepetGonder = sepetKutu.querySelector("[data-sepet-gonder]");
+    var sepetPanel = document.getElementById("sepet-panel");
+    var ozetBtn = sepetKutu.querySelector(".sepet-ozet");
+    var stickyBar = document.querySelector(".sticky-bar");
+
+    function sepetKonum() {
+      // Sepet çubuğu, mobilde sticky bar'ın üstüne oturur
+      var h = stickyBar && getComputedStyle(stickyBar).display !== "none" ? stickyBar.offsetHeight : 0;
+      sepetKutu.style.bottom = h + "px";
+    }
+    window.addEventListener("resize", sepetKonum, { passive: true });
+
+    function tlYaz(n) { return n.toLocaleString("tr-TR") + " ₺"; }
+
+    function mesajKur() {
+      var satirlar = [], toplam = 0;
+      Object.keys(sepet).forEach(function (ad) {
+        var it = sepet[ad], tutar = it.fiyat * it.adet;
+        toplam += tutar;
+        satirlar.push("• " + it.adet + "× " + ad + " — " + tutar + " ₺");
+      });
+      var teslimEl = sepetKutu.querySelector('input[name="teslim"]:checked');
+      var teslim = teslimEl ? teslimEl.value : "Gel-al";
+      var msg = "Merhaba, sipariş vermek istiyorum:\n" + satirlar.join("\n") +
+        "\nToplam: " + toplam + " ₺" +
+        "\nAlım: " + teslim + (teslim === "Paket servis" ? " (adresi yazacağım)" : "");
+      return { msg: msg, toplam: toplam };
+    }
+
+    function sepetCiz() {
+      var adlar = Object.keys(sepet);
+      var adet = adlar.reduce(function (t, a) { return t + sepet[a].adet; }, 0);
+      if (!adet) {
+        sepetKutu.hidden = true;
+        sepetPanel.hidden = true;
+        ozetBtn.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("sepetli");
+        sepetListe.innerHTML = ""; // bayat satır/buton kalmasın
+        sepetOzet.textContent = "Sipariş listesi boş";
+        return;
+      }
+      var kur = mesajKur();
+      sepetKutu.hidden = false;
+      document.body.classList.add("sepetli");
+      sepetOzet.textContent = adet + " ürün · " + tlYaz(kur.toplam);
+      sepetGonder.href = "https://wa.me/" + TEL + "?text=" + encodeURIComponent(kur.msg);
+      sepetListe.innerHTML = "";
+      adlar.forEach(function (ad) {
+        var it = sepet[ad];
+        var li = document.createElement("li");
+        var isim = document.createElement("span");
+        isim.className = "sl-ad";
+        isim.textContent = ad;
+        var tutar = document.createElement("span");
+        tutar.className = "sl-tutar";
+        tutar.textContent = tlYaz(it.fiyat * it.adet);
+        var kontrol = document.createElement("span");
+        kontrol.className = "sl-kontrol";
+        var eksi = document.createElement("button");
+        eksi.type = "button"; eksi.textContent = "−";
+        eksi.setAttribute("aria-label", ad + " azalt");
+        eksi.addEventListener("click", function () { urunAzalt(ad); });
+        var sayi = document.createElement("span");
+        sayi.className = "sl-adet"; sayi.textContent = it.adet;
+        var arti = document.createElement("button");
+        arti.type = "button"; arti.textContent = "+";
+        arti.setAttribute("aria-label", ad + " artır");
+        arti.addEventListener("click", function () { urunEkle(ad, it.fiyat); });
+        kontrol.appendChild(eksi); kontrol.appendChild(sayi); kontrol.appendChild(arti);
+        li.appendChild(isim); li.appendChild(kontrol); li.appendChild(tutar);
+        sepetListe.appendChild(li);
+      });
+      sepetKonum();
+    }
+
+    function urunEkle(ad, fiyat) {
+      if (!sepet[ad]) sepet[ad] = { fiyat: fiyat, adet: 0 };
+      sepet[ad].adet++;
+      sepetCiz();
+    }
+    function urunAzalt(ad) {
+      if (!sepet[ad]) return;
+      sepet[ad].adet--;
+      if (sepet[ad].adet <= 0) delete sepet[ad];
+      sepetCiz();
+    }
+
+    document.querySelectorAll(".mi-ekle, .combo-ekle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        urunEkle(btn.getAttribute("data-urun"), parseInt(btn.getAttribute("data-fiyat"), 10));
+        btn.classList.add("eklendi");
+        window.setTimeout(function () { btn.classList.remove("eklendi"); }, 350);
+      });
+    });
+
+    ozetBtn.addEventListener("click", function () {
+      var acik = sepetPanel.hidden;
+      sepetPanel.hidden = !acik;
+      ozetBtn.setAttribute("aria-expanded", String(acik));
+    });
+
+    sepetKutu.querySelectorAll('input[name="teslim"]').forEach(function (r) {
+      r.addEventListener("change", sepetCiz);
+    });
+  }
+
   // ---- Scroll reveal ----
   var revealEls = document.querySelectorAll(".reveal");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

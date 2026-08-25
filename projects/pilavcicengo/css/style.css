@@ -468,6 +468,53 @@ section { scroll-margin-top: 72px; }
   font-style: italic;
 }
 
+/* Siparişe ekle butonları */
+.mi-ekle {
+  flex: none;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--antrasit);
+  background: var(--krem);
+  color: var(--kirmizi-koyu);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+.mi-ekle::after { /* görünümü büyütmeden 44px+ dokunma alanı */
+  content: "";
+  position: absolute;
+  inset: -8px;
+}
+.mi-ekle.eklendi { background: var(--kirmizi); color: #FFF7EC; border-color: var(--kirmizi); transform: scale(1.15); }
+
+.combo-ekle {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.9rem;
+  min-height: 44px;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid var(--antrasit);
+  border-radius: 4px;
+  background: var(--krem-koyu);
+  color: var(--antrasit);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+.combo-ekle.eklendi { background: var(--kirmizi); color: #FFF7EC; border-color: var(--kirmizi); }
+@media (hover: hover) and (pointer: fine) {
+  .mi-ekle:hover { background: var(--antrasit); color: var(--krem); }
+  .combo-ekle:hover { background: var(--antrasit); color: var(--krem); }
+}
+
 .menu-combos { margin-top: 3.5rem; }
 .combo-note { font-size: 1.15rem; }
 
@@ -779,6 +826,111 @@ section { scroll-margin-top: 72px; }
 
 @media (max-width: 700px) {
   .footer-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+
+/* ---------- Sipariş çubuğu ---------- */
+.sepet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 108;
+  background: var(--antrasit-2);
+  color: var(--krem);
+  border-top: 2px solid var(--altin);
+  box-shadow: 0 -6px 18px rgba(38, 32, 26, 0.25);
+}
+.sepet-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.55rem;
+}
+.sepet-ozet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--krem);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0.6rem 0;
+}
+.sepet-ok { color: var(--altin); font-size: 0.85em; }
+.sepet-ozet[aria-expanded="true"] .sepet-ok { transform: rotate(180deg); }
+.sepet-gonder { white-space: nowrap; padding: 0.7rem 1.2rem; font-size: 0.9rem; }
+
+.sepet-panel {
+  max-height: 45vh;
+  overflow-y: auto;
+  border-bottom: 1px solid rgba(246, 239, 226, 0.15);
+  padding: 1rem var(--pad) 0.5rem;
+}
+.sepet-liste { list-style: none; max-width: var(--wrap); margin-inline: auto; }
+.sepet-liste li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-block: 0.45rem;
+  border-bottom: 1px dashed rgba(246, 239, 226, 0.15);
+}
+.sl-ad { flex: 1; font-weight: 600; font-size: 0.95rem; }
+.sl-tutar { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sl-kontrol { display: inline-flex; align-items: center; gap: 0.15rem; }
+.sl-kontrol button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(246, 239, 226, 0.5);
+  background: none;
+  color: var(--krem);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+}
+.sl-kontrol button::after { content: ""; position: absolute; inset: -6px; }
+.sl-adet { min-width: 1.6em; text-align: center; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+.sepet-teslim {
+  border: none;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-block: 0.8rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+.sepet-teslim legend {
+  float: left;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--altin);
+  padding-right: 1rem;
+}
+.sepet-teslim label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding-block: 0.5rem;
+}
+.sepet-teslim input { accent-color: var(--kirmizi); width: 18px; height: 18px; }
+
+/* Sepet doluyken içerik fixed çubukların altında kalmasın */
+body.sepetli { padding-bottom: 76px; }
+
+@media (max-width: 480px) {
+  .sepet-gonder { padding: 0.7rem 0.9rem; font-size: 0.82rem; }
+  .sepet-ozet { font-size: 0.92rem; }
 }
 
 /* ---------- Mobil sticky bar ---------- */

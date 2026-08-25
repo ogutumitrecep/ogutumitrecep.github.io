@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 
   <link rel="preload" as="image" fetchpriority="high" href="assets/images/tavuklu-pilav-800.webp" imagesrcset="assets/images/tavuklu-pilav-480.webp 480w, assets/images/tavuklu-pilav-800.webp 800w, assets/images/tavuklu-pilav-1200.webp 1200w" imagesizes="(max-width: 760px) 92vw, min(44vw, 430px)">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 
   <!-- Schema.org: yalnızca doğrulanmış gerçek veriler -->
   <script type="application/ld+json">
@@ -179,8 +179,8 @@
         <p>Mesai bitti, kazan bitmedi. 23:30'a kadar buradayız.</p>
       </li>
       <li class="reveal">
-        <h3>Sipariş hattı</h3>
-        <p>Telefonla söyle, gelince hazır olsun: 0531 957 53 40.</p>
+        <h3>Paket &amp; gel-al</h3>
+        <p>Paket de var, gel-al da. Telefonla söyle, hazır olsun: 0531 957 53 40.</p>
       </li>
     </ul>
   </div>
@@ -196,31 +196,30 @@
       <div class="menu-col reveal">
         <h3 class="menu-col-title">Yiyecekler</h3>
         <ul class="menu-list">
-          <li><span class="mi-name">Sade Pilav</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">130 ₺</span></li>
+          <li><span class="mi-name">Sade Pilav</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">130 ₺</span><button class="mi-ekle" type="button" data-urun="Sade Pilav" data-fiyat="130" aria-label="Sade Pilav siparişe ekle">+</button></li>
           <li>
             <span class="mi-name">Tavuklu Pilav <em class="mi-tag">en çok giden</em></span>
-            <span class="mi-dots" aria-hidden="true"></span><span class="mi-price">170 ₺</span>
+            <span class="mi-dots" aria-hidden="true"></span><span class="mi-price">170 ₺</span><button class="mi-ekle" type="button" data-urun="Tavuklu Pilav" data-fiyat="170" aria-label="Tavuklu Pilav siparişe ekle">+</button>
           </li>
-          <li><span class="mi-name">1,5 Tavuklu Pilav</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">220 ₺</span></li>
-          <li><span class="mi-name">Pilav Üstü Kuru Fasulye</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">220 ₺</span></li>
-          <li><span class="mi-name">Pilav Üstü Tavuk Sote</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">220 ₺</span></li>
-          <li><span class="mi-name">Süt Mısır</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">50 ₺</span></li>
+          <li><span class="mi-name">1,5 Tavuklu Pilav</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">220 ₺</span><button class="mi-ekle" type="button" data-urun="1,5 Tavuklu Pilav" data-fiyat="220" aria-label="1,5 Tavuklu Pilav siparişe ekle">+</button></li>
+          <li><span class="mi-name">Pilav Üstü Kuru Fasulye</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">220 ₺</span><button class="mi-ekle" type="button" data-urun="Pilav Üstü Kuru Fasulye" data-fiyat="220" aria-label="Pilav Üstü Kuru Fasulye siparişe ekle">+</button></li>
+          <li><span class="mi-name">Pilav Üstü Tavuk Sote</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">220 ₺</span><button class="mi-ekle" type="button" data-urun="Pilav Üstü Tavuk Sote" data-fiyat="220" aria-label="Pilav Üstü Tavuk Sote siparişe ekle">+</button></li>
+          <li><span class="mi-name">Süt Mısır</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">50 ₺</span><button class="mi-ekle" type="button" data-urun="Süt Mısır" data-fiyat="50" aria-label="Süt Mısır siparişe ekle">+</button></li>
         </ul>
-        <!-- TODO: İşletmeden fiyat bilgisi alınacak — tabelada Tost &amp; Sandviç de var, fiyatı menü broşüründe yok -->
-        <p class="menu-foot">Tost &amp; sandviç çeşitleri de var — fiyatları için tezgâha sor ya da ara.</p>
+        <p class="menu-foot">Artıya bas, listen hazır olsun — WhatsApp'tan tek dokunuşla gönder.</p>
       </div>
 
       <div class="menu-col reveal">
         <h3 class="menu-col-title">İçecekler</h3>
         <ul class="menu-list">
-          <li><span class="mi-name">Ayran</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span></li>
-          <li><span class="mi-name">Şalgam</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span></li>
-          <li><span class="mi-name">Kola</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">50 ₺</span></li>
-          <li><span class="mi-name">Meyveli Soda</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">40 ₺</span></li>
-          <li><span class="mi-name">Didi</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span></li>
-          <li><span class="mi-name">Link</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span></li>
-          <li><span class="mi-name">Sade Soda</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">20 ₺</span></li>
-          <li><span class="mi-name">Su</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">20 ₺</span></li>
+          <li><span class="mi-name">Ayran</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span><button class="mi-ekle" type="button" data-urun="Ayran" data-fiyat="30" aria-label="Ayran siparişe ekle">+</button></li>
+          <li><span class="mi-name">Şalgam</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span><button class="mi-ekle" type="button" data-urun="Şalgam" data-fiyat="30" aria-label="Şalgam siparişe ekle">+</button></li>
+          <li><span class="mi-name">Kola</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">50 ₺</span><button class="mi-ekle" type="button" data-urun="Kola" data-fiyat="50" aria-label="Kola siparişe ekle">+</button></li>
+          <li><span class="mi-name">Meyveli Soda</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">40 ₺</span><button class="mi-ekle" type="button" data-urun="Meyveli Soda" data-fiyat="40" aria-label="Meyveli Soda siparişe ekle">+</button></li>
+          <li><span class="mi-name">Didi</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span><button class="mi-ekle" type="button" data-urun="Didi" data-fiyat="30" aria-label="Didi siparişe ekle">+</button></li>
+          <li><span class="mi-name">Link</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 ₺</span><button class="mi-ekle" type="button" data-urun="Link" data-fiyat="30" aria-label="Link siparişe ekle">+</button></li>
+          <li><span class="mi-name">Sade Soda</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">20 ₺</span><button class="mi-ekle" type="button" data-urun="Sade Soda" data-fiyat="20" aria-label="Sade Soda siparişe ekle">+</button></li>
+          <li><span class="mi-name">Su</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">20 ₺</span><button class="mi-ekle" type="button" data-urun="Su" data-fiyat="20" aria-label="Su siparişe ekle">+</button></li>
         </ul>
       </div>
     </div>
@@ -234,25 +233,28 @@
           <h4>Tavuklu Pilav Menü</h4>
           <p>Tavuklu pilav + ayran</p>
           <strong>200 ₺</strong>
+          <button class="combo-ekle" type="button" data-urun="Tavuklu Pilav Menü" data-fiyat="200">Siparişe Ekle</button>
         </div>
         <div class="combo">
           <span class="combo-no">2</span>
           <h4>Kuru Fasulye Menü</h4>
           <p>Pilav üstü kuru fasulye + ayran</p>
           <strong>250 ₺</strong>
+          <button class="combo-ekle" type="button" data-urun="Kuru Fasulye Menü" data-fiyat="250">Siparişe Ekle</button>
         </div>
         <div class="combo">
           <span class="combo-no">3</span>
           <h4>Tavuk Sote Menü</h4>
           <p>Pilav üstü tavuk sote + ayran</p>
           <strong>250 ₺</strong>
+          <button class="combo-ekle" type="button" data-urun="Tavuk Sote Menü" data-fiyat="250">Siparişe Ekle</button>
         </div>
       </div>
       <div class="menu-cta">
         <a class="btn btn-primary" href="tel:+905319575340">Siparişi Telefonla Ver</a>
         <a class="btn btn-ghost" href="https://wa.me/905319575340?text=Merhaba%2C%20sipari%C5%9F%20vermek%20istiyorum%3A%0A%E2%80%A2%20%C3%9Cr%C3%BCn%3A%20%0A%E2%80%A2%20Al%C4%B1%C5%9F%20saati%3A%20%0A%E2%80%A2%20%C4%B0sim%3A%20" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
       </div>
-      <p class="menu-foot">Telefonda söyle, sen gelene kadar hazır olsun.</p>
+      <p class="menu-foot">Paket de var, gel-al da. Telefonda söyle, sen gelene kadar hazır olsun.</p>
     </div>
   </div>
 </section>
@@ -396,6 +398,7 @@
           <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.8956952,29.3521941&amp;destination_place_id=ChIJbZIt40DZyhQRd1oAcqkL4OM" target="_blank" rel="noopener">Yol Tarifi Al</a>
           <a class="btn btn-ghost" href="tel:+905319575340">0531 957 53 40</a>
         </div>
+        <p class="konum-sosyal">Paket servis ve gel-al var — telefonla ya da WhatsApp'tan söyle.</p>
         <p class="konum-sosyal">Instagram: <a href="https://www.instagram.com/cengo_plavci/" target="_blank" rel="noopener">@cengo_plavci</a></p>
       </div>
 
@@ -457,6 +460,25 @@
   </div>
 </footer>
 
+<!-- ======================= SİPARİŞ ÇUBUĞU ======================= -->
+<div class="sepet" id="sepet" hidden>
+  <div class="sepet-panel" id="sepet-panel" hidden>
+    <ul class="sepet-liste" data-sepet-liste></ul>
+    <fieldset class="sepet-teslim">
+      <legend>Nasıl alacaksın?</legend>
+      <label><input type="radio" name="teslim" value="Gel-al" checked> Gel-al</label>
+      <label><input type="radio" name="teslim" value="Paket servis"> Paket servis</label>
+    </fieldset>
+  </div>
+  <div class="wrap sepet-inner">
+    <button class="sepet-ozet" type="button" aria-expanded="false" aria-controls="sepet-panel">
+      <span class="sepet-say" data-sepet-ozet aria-live="polite">Sipariş listesi boş</span>
+      <span class="sepet-ok" aria-hidden="true">▾</span>
+    </button>
+    <a class="btn btn-primary sepet-gonder" data-sepet-gonder href="https://wa.me/905319575340" target="_blank" rel="noopener">WhatsApp'tan Gönder</a>
+  </div>
+</div>
+
 <!-- ======================= MOBİL STICKY BAR ======================= -->
 <nav class="sticky-bar" aria-label="Hızlı işlemler">
   <a href="#menu">
@@ -477,6 +499,6 @@
   </a>
 </nav>
 
-<script src="js/main.js?v=2" defer></script>
+<script src="js/main.js?v=3" defer></script>
 </body>
 </html>
