@@ -105,21 +105,25 @@ a:focus-visible,
   color: #FFF7EC;
   box-shadow: 3px 3px 0 var(--antrasit);
 }
-.btn-primary:hover { background: var(--kirmizi-koyu); transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--antrasit); }
 .btn-primary:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--antrasit); }
 
 .btn-ghost {
   background: transparent;
   color: var(--antrasit);
 }
-.btn-ghost:hover { background: var(--antrasit); color: var(--krem); }
 
 .btn-ghost-light {
   background: transparent;
   color: var(--krem);
   border-color: var(--krem);
 }
-.btn-ghost-light:hover { background: var(--krem); color: var(--antrasit-2); }
+
+/* Hover yalnızca gerçek imleçli cihazlarda: dokunmatikte "yapışkan hover" olmasın */
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover { background: var(--kirmizi-koyu); transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--antrasit); }
+  .btn-ghost:hover { background: var(--antrasit); color: var(--krem); }
+  .btn-ghost-light:hover { background: var(--krem); color: var(--antrasit-2); }
+}
 
 .btn-big { font-size: 1.05rem; padding: 1rem 2rem; }
 
@@ -128,6 +132,7 @@ a:focus-visible,
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(246, 239, 226, 0.92); /* color-mix desteklemeyen tarayıcılar için */
   background: color-mix(in srgb, var(--krem) 92%, transparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -153,6 +158,9 @@ a:focus-visible,
   display: flex;
   gap: 0.4rem;
   align-items: baseline;
+  /* Dokunma alanını 44px'e çıkar, görünümü değiştirme */
+  padding-block: 0.65rem;
+  margin-block: -0.65rem;
 }
 .brand-pilavci { color: var(--antrasit); }
 .brand-cengo { color: var(--kirmizi); }
@@ -165,7 +173,9 @@ a:focus-visible,
   color: var(--kahve);
   transition: color 0.15s ease;
 }
-.main-nav a:hover { color: var(--kirmizi); }
+@media (hover: hover) and (pointer: fine) {
+  .main-nav a:hover { color: var(--kirmizi); }
+}
 
 .btn-header {
   border-width: 2px;
@@ -176,14 +186,16 @@ a:focus-visible,
   border-color: var(--antrasit);
   text-decoration: none;
 }
-.btn-header:hover { background: var(--kirmizi); border-color: var(--kirmizi); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-header:hover { background: var(--kirmizi); border-color: var(--kirmizi); }
+}
 
 @media (max-width: 860px) {
   .main-nav { display: none; }
 }
 @media (max-width: 480px) {
   .btn-header span { display: none; }
-  .btn-header { padding: 0.6rem; }
+  .btn-header { padding: 0.8rem; } /* 18px ikon + padding + border = 44px+ dokunma alanı */
   .btn-header svg { width: 18px; height: 18px; }
 }
 
@@ -219,6 +231,29 @@ a:focus-visible,
   letter-spacing: 0.1em;
   font-size: 1.05em;
 }
+
+/* Açık/kapalı durum rozeti (JS doldurur) */
+.durum-rozet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+  white-space: nowrap;
+}
+.durum-rozet::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.durum-rozet.acik { color: #4C6128; }        /* koyu turşu yeşili — krem üstünde 4,5:1+ */
+.durum-rozet.kapali { color: var(--kirmizi-koyu); }
+.durum-rozet-konum { margin-bottom: 1rem; }
 
 .hero h1 {
   font-family: var(--font-display);
@@ -270,6 +305,11 @@ a:focus-visible,
   .hero-grid { grid-template-columns: 1fr; }
   .hero-photo { order: 2; max-width: 92vw; }
   .hero-photo img { box-shadow: 6px 6px 0 rgba(193, 144, 47, 0.35); }
+}
+/* Dar ekranda iki hero CTA'sı kesin tek satırda kalsın */
+@media (max-width: 400px) {
+  .hero-cta { gap: 0.6rem; }
+  .hero-cta .btn { padding-inline: 1.2rem; }
 }
 
 /* ---------- Proof band ---------- */
@@ -357,9 +397,11 @@ section { scroll-margin-top: 72px; }
   .neden-grid li:nth-child(odd) { border-right: 1px solid var(--cizgi) !important; padding-right: 1.2rem; }
   .neden-grid li:nth-child(even) { padding-left: 1.2rem !important; }
 }
+/* Telefonda da 2 kolon: "Neden Cengo?" menüyü fazla aşağı itmesin */
 @media (max-width: 540px) {
-  .neden-grid { grid-template-columns: 1fr; }
-  .neden-grid li { border-right: none !important; padding: 1.3rem 0 !important; }
+  .neden-grid li { padding-block: 1.2rem; }
+  .neden-grid h3 { font-size: 1.05rem; }
+  .neden-grid p { font-size: 0.9rem; }
 }
 
 /* ---------- Menü ---------- */
@@ -442,6 +484,18 @@ section { scroll-margin-top: 72px; }
   background: var(--krem);
   position: relative;
 }
+.combo-foto {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--altin);
+  object-fit: cover;
+}
+.combo:has(.combo-foto) h4,
+.combo:has(.combo-foto) p { padding-right: 64px; }
 .combo-no {
   position: absolute;
   top: -14px;
@@ -636,6 +690,19 @@ section { scroll-margin-top: 72px; }
 }
 .konum-sosyal a { font-weight: 800; color: var(--kirmizi-koyu); }
 
+/* Küçük metin linklerinde 44px dokunma alanı.
+   Footer'da linkler alt alta olduğundan negatif marj KULLANILMAZ —
+   padding hem hedefi büyütür hem hedefler arasına gerçek boşluk koyar. */
+.konum-sosyal a {
+  display: inline-block;
+  padding: 0.7rem 0.3rem;
+  margin: -0.7rem -0.3rem;
+}
+.site-footer a {
+  display: inline-block;
+  padding-block: 0.65rem;
+}
+
 .konum-photo img {
   border: 3px solid var(--antrasit);
   border-radius: 6px;
@@ -699,7 +766,9 @@ section { scroll-margin-top: 72px; }
 }
 .footer-tag { margin-top: 0.3rem; color: var(--altin); }
 .site-footer a { color: rgba(246, 239, 226, 0.9); }
-.site-footer a:hover { color: var(--altin); }
+@media (hover: hover) and (pointer: fine) {
+  .site-footer a:hover { color: var(--altin); }
+}
 .footer-note {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
@@ -736,7 +805,7 @@ section { scroll-margin-top: 72px; }
   font-size: 0.75rem;
   font-weight: 600;
 }
-.sticky-bar a:nth-child(2) { border-inline: 1px solid rgba(246, 239, 226, 0.15); }
+.sticky-bar a + a { border-left: 1px solid rgba(246, 239, 226, 0.15); }
 .sticky-bar a:active { background: rgba(246, 239, 226, 0.08); }
 .sticky-bar svg { color: var(--altin); }
 
