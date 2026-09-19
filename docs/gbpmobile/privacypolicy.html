@@ -285,7 +285,7 @@
             <h1>⚽ Gizlilik Politikası</h1>
 
             <div class="app-info">
-                <p><strong>Son Güncelleme:</strong> 16.11.2025</p>
+                <p><strong>Son Güncelleme:</strong> 19.09.2026</p>
                 <p><strong>Yayıncı:</strong> Developer Hope</p>
                 <p>
                     <strong>Uygulama Adı:</strong> Banko Tahminler - İddaa
@@ -354,13 +354,26 @@
                     için)
                 </li>
                 <li>
+                    <strong>Anonim Oturum Kayıtları:</strong> Hangi ekranda ne
+                    kadar kaldığınız, dokunma ve kaydırma hareketleriniz
+                    (arayüzdeki takılma noktalarını bulup gidermek için).
+                    Kayıtlar anonimdir, bir hesapla ilişkilendirilmez; metin
+                    girdiğiniz alanlar (premium kod, kullanıcı adı)
+                    kayıtlarda maskelenir ve okunamaz. Kayda yalnızca
+                    reklamsız (premium) sürüme geçip geçmediğiniz bilgisi
+                    etiket olarak eklenir; ödeme bilgisi, tutar, sipariş
+                    numarası veya hesap bilgisi <strong>gönderilmez</strong>.
+                </li>
+                <li>
                     <strong>Hata ve Çökme Raporları:</strong> Teknik sorunlar ve
                     uygulama çökmeleri (hataları düzeltmek ve stabiliteyi
                     artırmak için)
                 </li>
                 <li>
-                    <strong>IP Adresi:</strong> Genel konum bilgisi (bölgesel
-                    içerik sağlamak için)
+                    <strong>IP Adresi:</strong> Sunucuya gelen isteklerde,
+                    kötüye kullanımı engelleyen istek sınırlama (rate limit)
+                    kontrolü için geçici olarak okunur. Saklanmaz ve konum
+                    çıkarımı için kullanılmaz.
                 </li>
             </ul>
 
@@ -379,6 +392,17 @@
                     <strong>Senkronizasyon Verileri:</strong> Son güncelleme
                     zamanları, veri versiyonları (güncel bilgi sağlamak için)
                 </li>
+                <li>
+                    <strong>Spor Toto Takma Adı (isteğe bağlı):</strong>
+                    Arkadaş tahminleri özelliğine katılmak isterseniz bir ad
+                    girersiniz. Bu ad, o haftaya ait 1-X-2 tahminlerinizle
+                    birlikte <strong>sunucumuzda saklanır</strong> ve diğer
+                    katılımcılarla karşılaştırma yapılabilmesi için kullanılır.
+                    Özellik tamamen isteğe bağlıdır: katılmadan uygulamanın
+                    tamamı kullanılabilir. Şifre, hesap veya kimlik doğrulama
+                    gerektirmez; girdiğiniz adın gerçek adınız olması da
+                    gerekmez.
+                </li>
             </ul>
 
             <h3>C. Toplamadığımız Veriler:</h3>
@@ -390,7 +414,10 @@
                     >
                 </p>
                 <ul>
-                    <li>Ad, soyad, kimlik bilgileri</li>
+                    <li>
+                        Kimlik belgesi bilgileri (T.C. kimlik numarası,
+                        pasaport vb.)
+                    </li>
                     <li>E-posta adresi veya telefon numarası</li>
                     <li>Konum bilgileri (GPS, hassas konum)</li>
                     <li>Finansal bilgiler (kredi kartı, banka hesabı)</li>
@@ -453,13 +480,17 @@
             <h3>B. Uzak Sunucu (MongoDB):</h3>
             <ul>
                 <li>
-                    <strong>Sadece Uygulama Verileri:</strong> Sunucumuzda
-                    yalnızca maç tahminleri, maç bilgileri ve oranlar gibi genel
-                    veriler saklanır
+                    <strong>Ağırlıklı Olarak Uygulama Verileri:</strong>
+                    Sunucumuzda esas olarak maç tahminleri, maç bilgileri ve
+                    oranlar gibi genel veriler saklanır
                 </li>
                 <li>
-                    <strong>Kişisel Veri Yok:</strong> Sunucularımızda herhangi
-                    bir kullanıcı verisi saklanmaz
+                    <strong>Tek İstisna — Spor Toto Takma Adı:</strong>
+                    Arkadaş tahminleri özelliğine katılırsanız girdiğiniz ad ve
+                    o haftaki 1-X-2 tahminleriniz sunucuda saklanır. Bunun
+                    dışında sunucularımızda kullanıcıya ait başka bir veri
+                    tutulmaz; hesap, şifre, e-posta veya cihaz kimliği
+                    saklanmaz.
                 </li>
                 <li>
                     <strong>Güvenli Bağlantı:</strong> Tüm veri aktarımları
@@ -492,6 +523,17 @@
                         target="_blank"
                     >
                         Google Gizlilik Politikası
+                    </a>
+                </li>
+                <li>
+                    <strong>Microsoft Clarity:</strong> Anonim oturum kayıtları
+                    ve ısı haritalarıyla arayüz sorunlarının tespiti
+                    <br />
+                    <a
+                        href="https://privacy.microsoft.com/privacystatement"
+                        target="_blank"
+                    >
+                        Microsoft Gizlilik Beyanı
                     </a>
                 </li>
                 <li>
@@ -638,12 +680,23 @@
                     uygulamayı kaldırana kadar cihazınızda saklanır
                 </li>
                 <li>
-                    <strong>Sunucu Verileri:</strong> Genel maç verileri süresiz
-                    olarak saklanır (kullanıcıya özel veri yok)
+                    <strong>Sunucu Verileri:</strong> Genel maç verileri
+                    süresiz olarak saklanır
+                </li>
+                <li>
+                    <strong>Spor Toto Takma Adı ve Tahminleri:</strong>
+                    Haftalık karşılaştırma kaydı olduğu için süresiz saklanır
+                    ve gönderildikten sonra değiştirilemez. Silinmesini
+                    isterseniz aşağıdaki iletişim adresinden bize yazın.
                 </li>
                 <li>
                     <strong>Log Verileri:</strong> Maksimum 90 gün süreyle
                     saklanır, sonra otomatik silinir
+                </li>
+                <li>
+                    <strong>Oturum Kayıtları:</strong> Microsoft Clarity
+                    tarafından kayıt tarihinden itibaren 30 gün saklanır, sonra
+                    otomatik silinir
                 </li>
             </ul>
 
@@ -759,7 +812,7 @@
                 <small>
                     Bu doküman Banko Tahminler - İddaa Analiz v1.0.0 için
                     hazırlanmıştır.<br />
-                    Son Güncelleme: 16.11.2025<br />
+                    Son Güncelleme: 19.09.2026<br />
                     © 2025 Developer Hope. Tüm hakları saklıdır.
                 </small>
             </p>
