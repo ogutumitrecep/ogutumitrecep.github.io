@@ -132,7 +132,7 @@
             <h1>Gizlilik Politikası</h1>
 
             <div class="info-box">
-                <p><strong>Son Güncelleme:</strong> 05.08.2026</p>
+                <p><strong>Son Güncelleme:</strong> 01.10.2026</p>
 
                 <p><strong>Yayıncı:</strong> Developer Hope</p>
 
@@ -181,6 +181,11 @@
                 <li>Firebase Instance ID</li>
                 <li>Uygulama Instance ID</li>
                 <li>
+                    Microsoft Clarity tarafından oluşturulan rastgele kullanıcı
+                    ve oturum kimliği (bir hesapla, adınızla veya e-postanızla
+                    ilişkili değildir)
+                </li>
+                <li>
                     Bildirim kayıt anahtarı (Firebase Cloud Messaging token) —
                     yalnızca bildirimleri açtıysanız
                 </li>
@@ -209,8 +214,9 @@
 
             <p>
                 Uygulama konum izni istemez ve GPS verisine erişmez. Ancak
-                analiz hizmeti, bağlantı kurulurken görülen IP adresinden
-                şehir düzeyinde yaklaşık bir coğrafi bölge çıkarabilir. Bu
+                analiz hizmetleri (Firebase Analytics ve Microsoft Clarity),
+                bağlantı kurulurken görülen IP adresinden şehir düzeyinde
+                yaklaşık bir coğrafi bölge çıkarabilir. Bu
                 bilgi kimliğinizle ilişkilendirilmez ve sokak/adres düzeyinde
                 bir konum içermez.
             </p>
@@ -225,6 +231,68 @@
                 silinir ve cihazınıza bildirim gönderilmesi durur.
             </p>
 
+            <h3>F. Oturum Kayıtları (Microsoft Clarity)</h3>
+
+            <p>
+                Uygulama, arayüzdeki takılma noktalarını bulup gidermek için
+                <strong>Microsoft Clarity</strong> ile anonim oturum kaydı ve
+                ısı haritası verisi toplar. Kayıt şunları içerebilir:
+            </p>
+
+            <ul>
+                <li>
+                    Hangi ekranlarda bulunduğunuz ve ekranlar arası gezinmeniz
+                </li>
+                <li>Dokunma, kaydırma ve sürükleme hareketleriniz</li>
+                <li>
+                    Uygulamada yaptığınız önemli işlemlerin adları (örneğin bir
+                    kategoriyi veya zikri açmak, tur tamamlamak, bir seriyi
+                    başlatmak, bir ayarı değiştirmek)
+                </li>
+                <li>
+                    Ekranda gördüğünüz içeriğin görüntüsü (örneğin sayaç değeri
+                    ve uygulamanın kendi zikir ve sure metinleri)
+                </li>
+                <li>
+                    Kişisel olmayan etiketler: seçtiğiniz ayarlar (karanlık
+                    mod, yazı boyutu, titreşim, ses vb.), açtığınız hazır
+                    kategori, zikir ve serilerin kimlikleri ve sayım miktarının
+                    yaklaşık aralığı
+                </li>
+                <li>
+                    Cihaz modeli, işletim sistemi sürümü, ekran boyutu ve
+                    uygulama sürümü
+                </li>
+            </ul>
+
+            <div class="highlight">
+                <p>
+                    <strong>Gizlenenler:</strong>
+                    Yazdığınız metinler (arama çubukları, kişisel zikir ve seri
+                    oluşturma formları) ile kendi oluşturduğunuz zikir ve
+                    serilerin adları ve metinleri kayıtlarda
+                    <strong>maskelenir ve okunamaz</strong>. Bu içerikler
+                    olay adlarına veya etiketlere de eklenmez. Kayıtlar bir
+                    hesapla, adınızla veya e-postanızla ilişkilendirilmez ve
+                    reklam amacıyla kullanılmaz.
+                </p>
+            </div>
+
+            <p>
+                Oturum kayıtları Microsoft Clarity tarafından kayıt tarihinden
+                itibaren 30 gün saklanır, sonra otomatik silinir. Bir
+                çökme yaşanırsa sorunu anlayabilmek için ilgili oturum kaydının
+                bağlantısı çökme raporuna eklenebilir.
+            </p>
+
+            <p>
+                <strong>Kapatma:</strong> Ayarlar &gt; Gizlilik &gt;
+                "Kullanım Verilerini Paylaş" anahtarını kapattığınızda
+                oturum kaydı hemen durur ve uygulama bu tercih kapalıyken
+                açıldığında Microsoft Clarity hiç başlatılmaz. Aynı anahtar
+                çökme raporlarını ve anonim kullanım ölçümlerini de durdurur.
+            </p>
+
             <h2>3. Verilerin Kullanım Amaçları</h2>
 
             <ul>
@@ -232,6 +300,10 @@
                 <li>Zikir ve sayaç deneyimini geliştirmek</li>
                 <li>Performans analizleri yapmak</li>
                 <li>Hataları tespit etmek</li>
+                <li>
+                    Arayüzdeki takılma noktalarını tespit edip gidermek (oturum
+                    kayıtları)
+                </li>
                 <li>
                     İzin verdiyseniz zikir hatırlatıcıları ve uygulama
                     duyuruları göndermek
@@ -262,6 +334,19 @@
                 <li>
                     <strong>Firebase Cloud Messaging</strong>
                     — Bildirim gönderimi (yalnızca izin verdiyseniz)
+                </li>
+
+                <li>
+                    <strong>Microsoft Clarity</strong>
+                    — Anonim oturum kayıtları ve ısı haritalarıyla arayüz
+                    sorunlarının tespiti
+                    <br />
+                    <a
+                        href="https://privacy.microsoft.com/privacystatement"
+                        target="_blank"
+                    >
+                        Microsoft Gizlilik Beyanı
+                    </a>
                 </li>
             </ul>
 
@@ -301,8 +386,9 @@
             <h2>7. Veri Paylaşımı</h2>
 
             <p>
-                Veriler yalnızca analiz, hata takibi ve reklam hizmetleri için
-                ilgili üçüncü taraf sağlayıcılarla paylaşılabilir.
+                Veriler yalnızca analiz, oturum kaydı, hata takibi ve reklam
+                hizmetleri için ilgili üçüncü taraf sağlayıcılarla
+                paylaşılabilir.
             </p>
 
             <p>Yasal zorunluluklar dışında üçüncü kişilerle paylaşılmaz.</p>
